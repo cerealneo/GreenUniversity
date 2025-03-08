@@ -1,102 +1,217 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>그린컴퓨터아카데미</title>
+    <title>그린대학교</title>
     <style>
         /* 초기화 */
         * {
-        margin: 0;
-        padding: 0;
-        font: normal 12px "noto sans koeran";
+            margin: 0;
+            padding: 0;
+            font: normal 12px "Noto Sans Korean", sans-serif;
         }
 
         ul,
         ol {
-        list-style: none;
+            list-style: none;
         }
+
         a {
-        text-decoration: none;
-        color: #111;
+            text-decoration: none;
+            color: #111;
         }
+
         input,
         textarea {
-        outline: none;
+            outline: none;
         }
 
         #wrapper {
-        width: 1920px;
-        height: auto;
-        margin: 0 auto;
+            max-width: 1920px;
+            width: 100%;
+            height: auto;
         }
-/*-----------------------------------------------------------*/
-        
+
+        /*-----------------------------------------------------------*/
+
         header {
             width: 100%;
             height: auto;
             margin: 0 auto;
         }
-        header .headertop { 
-            width: 100%;
-            height: auto;
+
+        .topbar {
             background-color: #3F97F6;
-        }
-        header .headertop .topbar {
+            text-align: center;
+            padding: 8px 0;
             width: 1200px;
-            height: auto;
             display: flex;
             justify-content: flex-end;
             margin: 0 auto;
-            padding: 8px 0;
         }
-        header .headertop .topbar a {
-            color: #FFFFFF;
+
+        .topbar a {
+            color: white;
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
         }
-        header .headerbar {
+
+        .topbar a:not(:last-child)::after {
+            content: "|";
+            color: white;
+            margin-left: 15px;
+        }
+
+        .headerbar {
             width: 1200px;
             height: 60px;
             margin: 0 auto;
-            padding: 15px 0px 0px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
         }
+
+        /* ****************** */
         header .headerbar img {
             position: relative;
             bottom: 5px;
         }
-        header .headerbar nav {
+
+        /* ----------------------------- */
+        #quickmenu {
             float: right;
             margin-top: 10px;
-        }
-        header .headerbar nav a {
-            font-size: 16px;
-            margin-left: 20px;
+            display: flex;
+            gap: 20px;
         }
 
-        
+        #quickmenu>li {
+            text-align: center;
+            margin-right: 5px;
+            position: relative;
+        }
+
+        #quickmenu>li>a {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* ********************************* */
+        .sub_menu_list {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #007bff;
+            width: 150px;
+        }
+
+        .sub_menu_list li {
+            background-color: #3F97F6;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .sub_menu_list li a {
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 10px;
+            display: block;
+        }
+
+        .sub_menu_list li:last-child a {
+            border-bottom: none;
+        }
+
+        #quickmenu>li:hover .sub_menu_list {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <div id="wrapper">
         <header>
-            <article class="headertop">    
-                <div class="topbar">
-                    <a href="#">HOME |</a>
-                    <a href="#">사이트맵 |</a>
-                    <a href="#">로그인 |</a>
-                    <a href="#">학생지원</a>
-                </div>
-            </article>
-                <article class="headerbar">
-                    <img src="./images/header_logo.png" alt="">
-                    <nav class="nav">
-                        <a href="#">학교소개</a>
-                        <a href="#">입학안내</a>
-                        <a href="#">교육 과정</a>
-                        <a href="#">학사 안내</a>
-                        <a href="#">커뮤니티</a>
-                    </nav>
-                </article>    
+            <div class="topbar">
+                <a href="#">HOME</a>
+                <a href="#">사이트맵</a>
+                <a href="#">로그인</a>
+                <a href="#">학생지원</a>
+            </div>
+            <div class="headerbar">
+                <a href="#"><img src="./images/header_logo.png" alt="그린대학교"></a>
+                <ul id="quickmenu">
+                    <li><a href="#">대학소개</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">총장 인사말</a></li>
+                            <li><a href="#">교육이념</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">입학안내</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">수시모집</a></li>
+                            <li><a href="#">정시모집</a></li>
+                            <li><a href="#">편입학</a></li>
+                            <li><a href="#">입학상담</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">대학·대학원</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">인문사회대학</a></li>
+                            <li><a href="#">자연과학대학</a></li>
+                            <li><a href="#">공과대학</a></li>
+                            <li><a href="#">사범대학</a></li>
+                            <li><a href="#">대학원</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">학사안내</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">학사일정</a></li>
+                            <li><a href="#">수강신청</a></li>
+                            <li><a href="#">성적</a></li>
+                            <li><a href="#">수료 및 졸업</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">대학생활</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">학생회소개</a></li>
+                            <li><a href="#">동아리/스터디</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="sub_menu_list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">뉴스 및 칼럼</a></li>
+                            <li><a href="#">취업정보</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">질문과 답변</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </header>
     </div>
 </body>
+
 </html>
