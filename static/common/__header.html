@@ -26,32 +26,76 @@
         }
 
         #wrapper {
-        width: 920px;
+        width: 1920px;
         height: auto;
         margin: 0 auto;
         }
+/*-----------------------------------------------------------*/
+        
+        header {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        header .headertop { 
+            width: 100%;
+            height: auto;
+            background-color: #3F97F6;
+        }
+        header .headertop .topbar {
+            width: 1200px;
+            height: auto;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 auto;
+            padding: 8px 0;
+        }
+        header .headertop .topbar a {
+            color: #FFFFFF;
+        }
+        header .headerbar {
+            width: 1200px;
+            height: 60px;
+            margin: 0 auto;
+            padding: 15px 0px 0px 0px;
+        }
+        header .headerbar img {
+            position: relative;
+            bottom: 5px;
+        }
+        header .headerbar nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .headerbar nav a {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
         
     </style>
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <div class="top-bar">
-                <a href="#">HOME |</a>
-                <a href="#">사이트맵 |</a>
-                <a href="#">로그인 |</a>
-                <a href="#">학생지원</a>
-            </div>
-            <div class="logo">
-                <img src="./images/header_logo.png" alt="">
-            </div>
-            <nav class="nav">
-                <a href="#">학교소개</a>
-                <a href="#">입학안내</a>
-                <a href="#">교육 과정</a>
-                <a href="#">학사 안내</a>
-                <a href="#">커뮤니티</a>
-            </nav>
+            <article class="headertop">    
+                <div class="topbar">
+                    <a href="#">HOME |</a>
+                    <a href="#">사이트맵 |</a>
+                    <a href="#">로그인 |</a>
+                    <a href="#">학생지원</a>
+                </div>
+            </article>
+                <article class="headerbar">
+                    <img src="./images/header_logo.png" alt="">
+                    <nav class="nav">
+                        <a href="#">학교소개</a>
+                        <a href="#">입학안내</a>
+                        <a href="#">교육 과정</a>
+                        <a href="#">학사 안내</a>
+                        <a href="#">커뮤니티</a>
+                    </nav>
+                </article>    
         </header>
     </div>
 </body>
