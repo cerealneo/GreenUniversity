@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             font: normal 12px "Noto Sans Korean", sans-serif;
-            box-sizing: border-box;
         }
 
         ul,
@@ -43,35 +42,55 @@
             font-size: 12px;
         }
 
-        .footer-container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
         .footer-link {
+            background: #1f2838;
             height: 50px;
             width: 100%;
+            max-width: 1200px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid #333;
         }
 
+        .top-footer {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+
         .footer-link li {
+            position: relative;
+            float: left;
+            line-height: 1;
+            text-align: center;
             padding: 0 10px;
         }
 
-        .footer-link li:not(:last-child) {
-            border-right: 1px solid #555;
+        .footer-link li::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 0;
+            width: 1px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
-        .footer-link a {
-            color: #ddd;
+        .footer-link li a {
+            display: block;
+            padding: 15px 10px 16px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 19px;
+            box-sizing: border-box;
         }
 
-        .footer-foot{
+        .footer-container {
             width: 100%;
+            max-width: 1200px;
             height: 169px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
         }
@@ -121,18 +140,18 @@
 <body>
     <div id="wrapper">
         <footer>
-            <div class="footer-container">
-                <ul class="footer-link">
-                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
-                    <li><a href="#" target="_blank">통합정보시스템</a></li>
-                    <li><a href="#" target="_blank">학사일정</a></li>
-                    <li><a href="#" target="_blank">주요민원 연락처</a></li>
-                    <li><a href="#" target="_blank">교내공지사항</a></li>
-                </ul>
+            <div class="footer">
+                <div class="top-footer">
+                    <ul class="footer-link">
+                        <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#" target="_blank">통합정보시스템</a></li>
+                        <li><a href="#" target="_blank">학사일정</a></li>
+                        <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                        <li><a href="#" target="_blank">교내공지사항</a></li>
+                    </ul>
+                </div>
 
-
-
-                <div class="footer-foot">
+                <div class="footer-container">
                     <div class="footer-dropdown">
                         <a href="#" title="주요사이트 바로가기">주요사이트</a>
                         <ul>
@@ -154,8 +173,8 @@
                                         <p>
                                             <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
                                             <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
-                                            <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a> </span>
-                                            <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                            <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a>
+                                                <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
                                         </p>
                                     </li>
                                 </ul>
