@@ -34,39 +34,48 @@
             height: auto;
         }
 
-        /*-----------------------------------------------------------*/
-
+        /*헤더*/
         header {
             width: 100%;
             height: auto;
             margin: 0 auto;
         }
 
-        .topbar {
+        .nav {
             background-color: #3F97F6;
-            text-align: center;
-            padding: 8px 0;
-            width: 1200px;
             display: flex;
-            justify-content: flex-end;
-            margin: 0 auto;
+            width: 100%;
+            padding: 4px 0;
         }
 
-        .topbar a {
+        .nav>.navbar {
+            width: 100%;
+            max-width: 1200px;
+            padding: 4px 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav>.navbar>.navbar-item {}
+
+        .nav>.navbar>.navbar-item:not(:last-child)::after {
+            content: "|";
             color: white;
             margin: 0 15px;
+        }
+
+        .nav>.navbar>.navbar-item>a {
+            text-align: center;
+            color: white;
             display: inline-block;
             position: relative;
         }
-
-        .topbar a:not(:last-child)::after {
-            content: "|";
-            color: white;
-            margin-left: 15px;
-        }
+        
 
         .headerbar {
-            width: 1200px;
+            width: 100%;
+            max-width: 1200px;
             height: 60px;
             margin: 0 auto;
             display: flex;
@@ -75,16 +84,13 @@
             padding: 10px 0;
         }
 
-        /* ****************** */
         header .headerbar img {
             position: relative;
-            bottom: 5px;
         }
 
-        /* ----------------------------- */
+        /* 메뉴바 */
         #quickmenu {
             float: right;
-            margin-top: 10px;
             display: flex;
             gap: 20px;
         }
@@ -103,28 +109,43 @@
             transition: 0.3s;
         }
 
-        /* ********************************* */
-        .sub_menu_list {
+        /* 서브메뉴바 */
+        #quickmenu .sub_menu_list {
             display: none;
             position: absolute;
             top: 40px;
-            left: 0;
             background-color: #007bff;
             width: 150px;
         }
 
-        .sub_menu_list li {
+        #quickmenu .sub_menu_list li {
             background-color: #3F97F6;
-            padding: 10px;
+            padding: 6px;
             text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #quickmenu > li:not(:last-child) > .sub_menu_list:not(:last-child) {
+            left: 0px;
+        }
+
+        #quickmenu > li:last-child > .sub_menu_list {
+            right: 0px;
+        }
+
+        .sub_menu_list li:last-child {
+            border-bottom: none;
         }
 
         .sub_menu_list li a {
             color: white;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            padding-bottom: 10px;
+            padding: 5px;
             display: block;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
         }
+
 
         .sub_menu_list li:last-child a {
             border-bottom: none;
@@ -139,11 +160,13 @@
 <body>
     <div id="wrapper">
         <header>
-            <div class="topbar">
-                <a href="#">HOME</a>
-                <a href="#">사이트맵</a>
-                <a href="#">로그인</a>
-                <a href="#">학생지원</a>
+            <div class="nav">
+                <div class="navbar">
+                    <div class="navbar-item"><a href="#">HOME</a></div>
+                    <div class="navbar-item"><a href="#">사이트맵</a></div>
+                    <div class="navbar-item"><a href="#">로그인</a></div>
+                    <div class="navbar-item"><a href="#">학생지원</a></div>
+                </div>
             </div>
             <div class="headerbar">
                 <a href="#"><img src="./images/header_logo.png" alt="그린대학교"></a>
