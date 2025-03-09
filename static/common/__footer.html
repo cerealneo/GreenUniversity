@@ -5,67 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>그린대학교</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px "Noto Sans Korean", sans-serif;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        input,
+        textarea {
+            outline: none;
+        }
+
+        #wrapper {
+            max-width: 1920px;
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            width: 100%;
+            height: 219px;
+            background: #1a1d21;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .footer-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .footer-link {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-link li {
+            padding: 0 10px;
+        }
+
+        .footer-link li:not(:last-child) {
+            border-right: 1px solid #555;
+        }
+
+        .footer-link a {
+            color: #ddd;
+        }
+
+        .footer-foot{
+            width: 100%;
+            height: 169px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-dropdown {
+            text-align: center;
+            margin-bottom: 10px;
+            float: right;
+            color: #aaa;
+        }
+
+        .footer-dropdown a {
+            color: #aaa;
+        }
+
+        .footer-content-box {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .footer_logo img {
+            max-width: 150px;
+        }
+
+        .footer-info {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .footer-contact a {
+            color: #ddd;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #aaa;
+        }
+    </style>
 </head>
 
 <body>
-    <footer>
-        <div>
-            <div>
+    <div id="wrapper">
+        <footer>
+            <div class="footer-container">
                 <ul class="footer-link">
-                    <li>
-                        <a href="#" target="_blank">개인정보처리방침</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">통합정보시스템</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">학사일정</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">주요민원 연락처</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">교내공지사항</a>
-                    </li>
-
+                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li><a href="#" target="_blank">통합정보시스템</a></li>
+                    <li><a href="#" target="_blank">학사일정</a></li>
+                    <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                    <li><a href="#" target="_blank">교내공지사항</a></li>
                 </ul>
-            </div>
-        </div>
-        <div>
-                <div >
-                    <a href="#" title="주요사이트 바로가기">주요사이트</a>
-                    <ul>
-                        <li><a href="#" target="_blank">그린대학교</a></li>
-                        <li><a href="#" target="_blank">취업진로지원센터</a></li>
-                        <li><a href="#" target="_blank">현장실습지원센터</a></li>
-                        <li><a href="#" target="_blank">학생생활관</a></li>
-                    </ul>
+
+
+
+                <div class="footer-foot">
+                    <div class="footer-dropdown">
+                        <a href="#" title="주요사이트 바로가기">주요사이트</a>
+                        <ul>
+                            <li><a href="#" target="_blank">그린대학교</a></li>
+                            <li><a href="#" target="_blank">취업진로지원센터</a></li>
+                            <li><a href="#" target="_blank">현장실습지원센터</a></li>
+                            <li><a href="#" target="_blank">학생생활관</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-content-box">
+                        <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
+                        <ul class="footer-info">
+                            <li>
+                                <ul class="footer-contact">
+                                    <li>
+                                        <p>그린대학교</p>
+                                        <p>
+                                            <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
+                                            <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
+                                            <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a> </span>
+                                            <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-content-box">
-                    <span class="footer_logo"><img alt="그린대학교"
-                            src="/static/common/images/footer_logo.png"></span>
-                    <ul class="footer-info">
-                        <li>
-                            <ul class="footer-contact">
-                                <li>
-                                    <p>그린대학교</p>
-                                    <p>
-                                        <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
-                                        <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
-                                        <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a> </span>
-                                        <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
