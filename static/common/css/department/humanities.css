@@ -1,0 +1,55 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 16px "Noto Sans Korean", sans-serif;
+    }
+    
+    ul,
+    ol {
+    list-style: none;
+    }
+    
+    a {
+    text-decoration: none;
+    color: #111;
+    }
+    
+    input,
+    textarea {
+    outline: none;
+    }
+    
+    #wrapper {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    }
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    width: 210px;
+    height: 302px;
+
+    border-top: 2px solid #222222;
+}
+
+.list-hadding {
+    font-size: 32px;
+    color: #222222;
+}
+
+.list > li {
+    width: 210px;
+    height: 60px;
+    margin-top: 2px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+article {
+
+}
