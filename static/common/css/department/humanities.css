@@ -2,7 +2,9 @@
 * {
     margin: 0;
     padding: 0;
-    font: normal 16px "Noto Sans Korean", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     }
     
     ul,
@@ -28,14 +30,22 @@
 
 main {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  
 }
 
-.list {
+  /*사이드*/
+
+aside {
     width: 210px;
     height: 302px;
+}
 
-    border-top: 2px solid #222222;
+aside > p {
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .list-hadding {
@@ -43,13 +53,120 @@ main {
     color: #222222;
 }
 
-.list > li {
+.list {
     width: 210px;
     height: 60px;
+    margin-top: 15px;
+    
+}
+
+.list > li:nth-child(1) {
+    border-top: 2px solid #222222;
+}
+
+.list > li {
     margin-top: 2px;
+    padding-left: 20px;
     border-bottom: 1px solid #dcdcdc;
+    line-height: 60px; 
+}
+
+.list > li:hover {
+    background: #3F97F6;
+}
+
+.list > li:hover a {
+    color: white;
 }
 
 article {
 
+    width: 990px;
+    margin-left: 60px;
+    margin-bottom: 90px;
+}
+
+article > p {
+    width: 930px;
+    height: 56px;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 2px solid #222222;
+}
+
+.main-1 {
+   width: 930px;
+   display: flex;
+   margin-top: 30px;
+}
+
+.main-1_body {
+    margin-left: 20px;
+}
+
+.main-1_body > p:nth-child(1) {
+    color: #5B6774;
+}
+
+.main-1_body > p:nth-child(2) {
+    margin-top: 20px;
+    color: #3B88D4;
+    font-size: 26px;
+}
+
+.main-1_body > p:nth-child(3) {
+    margin-top: 30px;
+    color: #666666;
+    font-size: 16px;
+}
+
+.p_img {
+    margin-top: 40px;
+    padding-bottom: 0;
+    color: #145074;
+
+}
+
+.p_img > img {
+    margin-right: 5px;
+}
+
+table {
+    width: 930px;
+    height: auto;
+    border-collapse: collapse; 
+    text-align: center;
+}
+
+.table-hd {
+    background: #F4F8FC;
+}
+.table-hd th {
+    font-weight: 700;
+}
+
+.table-bd td {
+    font-weight: 300;
+}
+
+.table-hd > th {
+    width: 249.2px;
+    height: 40px;
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.table-bd > td {
+    width: 249.2px;
+    height: 40px;
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.table-bd > td:last-child {
+    border-right: none;
+}
+
+.table-bd a > img {
+    margin-left: 10px;
 }
