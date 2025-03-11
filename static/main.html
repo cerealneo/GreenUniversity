@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그린대학교 - 메인</title>
+    <link rel="stylesheet" href="/static/common/css/_header.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <style>
+      /* 초기화 */
+      * {
+        margin: 0;
+        padding: 0;
+        font: normal 12px "Noto Sans Korean", sans-serif;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+
+      input,
+      textarea {
+        outline: none;
+      }
+
+      #wrapper {
+        max-width: 1920px;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto;
+        background-color: #f3f5f9;
+      }
+
+      .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        height: 560px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+
+      .swiper-slide1 {
+        background-image: url("/static/common/images/bg-main-vi01.jpg");
+      }
+
+      .swiper-slide2 {
+        background-image: url("/static/common/images/bg-main-vi02.jpg");
+      }
+      .swiper-slide3 {
+        background-image: url("/static/common/images/bg-main-vi03.jpg");
+      }
+
+      /* 공지사항 & 학사안내 스타일 */
+      .board {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+      }
+
+      .board article {
+        width: 48%;
+        background-color: #3182f6;
+        padding: 20px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      /* 포토 갤러리 스타일 */
+      .photo-gallery {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .photo-gallery img {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <div class="nav">
+          <div class="navbar">
+            <div class="navbar-item"><a href="#">HOME</a></div>
+            <div class="navbar-item"><a href="#">사이트맵</a></div>
+            <div class="navbar-item"><a href="#">로그인</a></div>
+            <div class="navbar-item"><a href="#">학생지원</a></div>
+          </div>
+        </div>
+        <div class="headerbar">
+          <a href="#"
+            ><img src="/static/common/images/header_logo.png" alt="그린대학교"
+          /></a>
+          <ul id="quickmenu">
+            <li>
+              <a href="#">대학소개</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">총장 인사말</a></li>
+                <li><a href="#">교육이념</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">조직도</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">입학안내</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">수시모집</a></li>
+                <li><a href="#">정시모집</a></li>
+                <li><a href="#">편입학</a></li>
+                <li><a href="#">입학상담</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">대학·대학원</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">인문사회대학</a></li>
+                <li><a href="#">자연과학대학</a></li>
+                <li><a href="#">공과대학</a></li>
+                <li><a href="#">사범대학</a></li>
+                <li><a href="#">대학원</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">학사안내</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">학사일정</a></li>
+                <li><a href="#">수강신청</a></li>
+                <li><a href="#">성적</a></li>
+                <li><a href="#">수료 및 졸업</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">대학생활</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">학생회소개</a></li>
+                <li><a href="#">동아리/스터디</a></li>
+                <li><a href="#">식단안내</a></li>
+                <li><a href="#">갤러리</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">커뮤니티</a>
+              <ul class="sub_menu_list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">뉴스 및 칼럼</a></li>
+                <li><a href="#">취업정보</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">질문과 답변</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-slide1">
+              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p>그린대학교 컴퓨터공학과</p>
+              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
+              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p>그린대학교 컴퓨터공학과</p>
+              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
+              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+            </div>
+            <div class="swiper-slide swiper-slide3">
+              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p>그린대학교 컴퓨터공학과</p>
+              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
+              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+      loop: true, // 무한 루프
+      autoplay: { delay: 3000 }, // 자동 재생
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  });
+</script>
