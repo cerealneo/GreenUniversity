@@ -71,6 +71,7 @@
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*메인*/
         main {
+            display: flex;
             width: 100%;
             max-width: 1200px;
             height: auto;
@@ -79,7 +80,8 @@
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*사이드*/
         main .side {
-            float: left;
+            width: 210px;
+            flex-shrink: 0;
         }
         main .side h4 {
             font-size: 32px;
@@ -106,10 +108,10 @@
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*공지사항*/
         main .notice {
-            float: right;
             width: 100%;
             max-width: 930px;
             padding-left: 60px;
+            flex-grow: 1;
         }
         main .notice .noticetop {
             width: 100%;
@@ -133,6 +135,8 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
+            background: url('/static/common/images/btn-sel-open01.png') no-repeat right center;
+            background-position: calc(100% - 10px) center;
             width: 150px;
             padding: 10px;
             margin-right: 5px;
@@ -200,6 +204,11 @@
             font-size: 15px;
             padding: 4px 10px;
             border: 1px solid #DEDEDE;
+            color: #888;
+        }
+        main .notice .noticemain .pagebtn a:hover {
+            color: #fff;
+            background-color: #3F97F6;
         }
         
         
@@ -296,11 +305,11 @@
                     <h4>학사안내</h4>
                         <ul>
                             <li><a href="/static/Bachelor/BacNotice.html">공지사항</a></li>
-                            <li><a href="/static/Bachelor/BacNotice.html">학사일정</a></li>
-                            <li><a href="/static/Bachelor/BacNotice.html">수강신청</a></li>
-                            <li><a href="/static/Bachelor/BacNotice.html">성적</a></li>
-                            <li><a href="/static/Bachelor/BacNotice.html">수료 및 졸업</a></li>
-                            <li><a href="/static/Bachelor/BacNotice.html">자주묻는질문</a></li>
+                            <li><a href="/static/Bachelor/BacSchedule.html">학사일정</a></li>
+                            <li><a href="/static/Bachelor/BacSubscribe.html">수강신청</a></li>
+                            <li><a href="/static/Bachelor/BacResult.html">성적</a></li>
+                            <li><a href="/static/Bachelor/BacGrad.html">수료 및 졸업</a></li>
+                            <li><a href="/static/Bachelor/BacQuestion.html">자주묻는질문</a></li>
                         </ul>
                 </article>
                 <article class="notice">
@@ -356,8 +365,8 @@
                             <a href="">1</a>
                             <a href="">2</a>
                             <a href="">3</a>
-                            <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
                             <a href=""><img src="/static/common/images/btn-next-page.png" alt="firstarr"></a>
+                            <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
                         </article>
                     </div>
                 </article>
