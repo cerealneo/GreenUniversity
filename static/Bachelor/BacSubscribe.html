@@ -3,12 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>공지사항</title>
+        <link rel="stylesheet" href="/static/common/css/_header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <style>
             /* 초기화 */
         * {
             margin: 0;
             padding: 0;
             font: normal 12px "Noto Sans Korean", sans-serif;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
         }
 
         ul,
@@ -31,11 +37,306 @@
             width: 100%;
             height: auto;
         }
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        /*homebar*/
+        .homebar {
+            width: 100%;
+            height: auto;
+            background-color: #ECF2F6;
+            margin-bottom: 60px;
+        }
+        .homebar .inline {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            text-align: right;
+            padding: 5px;
+        }
+        .homebar .inline img:nth-of-type(1) {
+            margin-left: 8px;
+        }
+        .homebar .inline a:nth-of-type(1) {
+            position: relative;
+            top: 2px;
+        }
+        .homebar .inline a:nth-of-type(2) {
+            margin-right: 10px;
+            position: relative;
+            bottom: 1px;
+            margin-left: 8px;
+        }
+        .homebar .inline a:nth-of-type(3) {
+            margin-right: 10px;
+            margin-left: 8px;
+            position: relative;
+            bottom: 1px;
+            left: 2px;
+        }
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        /*메인*/
+        main {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto;
+        }
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        /*사이드*/
+        main .side {
+            width: 210px;
+            flex-shrink: 0;
+        }
+        main .side h4 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        main .side ul {
+            text-align: left;
+            border-top: 2px solid black;
+            width: 210px;
+        }
+        main .side ul li {
+            border-bottom: 1px solid #DCDCDC;
+            padding: 20px 15px;
+        }
+        main .side ul li a {
+            font-size: 16px;
+        }
+        main .side ul li:hover {
+            background: #3F97F6;
+        }
+        main .side ul li:hover a {
+            color: white;
+        }
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        /*공지사항*/
+        main .signup {
+            width: 100%;
+            max-width: 930px;
+            padding-left: 60px;
+            flex-grow: 1;
+        }
+        main .signup .signuptop {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid black;
+            margin-bottom: 25px;
+        }
+        main .signup .signuptop h4 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        main .signup .duration {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        main .signup h4 {
+            font-size: 18px;
+            color: #145074;
+            margin-bottom: 5px;
+        }
+        main .signup .duration p {
+            font-size: 16px;
+            color: #666666;
+            font-weight: 10px;
+        }
+        main .signup .score {
+            width: 100%;
+            height: auto;
+            margin-bottom: 35px;
+        }
+        main .signup .score p {
+            font-size: 16px;
+            color: #666666;
+            font-weight: 10px;
+        }
+        main .signup .durationtable {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        main .signup .durationtable table {
+            border-top: 2px solid #071F4B;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        main .signup .durationtable th {
+            background-color: #F4F8FC;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #DEDEDE;
+        }
+        main .signup .durationtable td {
+            text-align: center;
+            border: 1px solid #DEDEDE;
+            padding: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+ /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        /*signup*/
+
         </style>
     </head>
     <body>
         <div id="wrapper">
-
+            <header>
+                <div class="nav">
+                    <div class="navbar">
+                        <div class="navbar-item"><a href="#">HOME</a></div>
+                        <div class="navbar-item"><a href="#">사이트맵</a></div>
+                        <div class="navbar-item"><a href="#">로그인</a></div>
+                        <div class="navbar-item"><a href="#">학생지원</a></div>
+                    </div>
+                </div>
+                <div class="headerbar">
+                    <a href="#"><img src="/static/common/images/header_logo.png" alt="그린대학교"></a>
+                    <ul id="quickmenu">
+                        <li><a href="#">대학소개</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">총장 인사말</a></li>
+                                <li><a href="#">교육이념</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="#">입학안내</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">수시모집</a></li>
+                                <li><a href="#">정시모집</a></li>
+                                <li><a href="#">편입학</a></li>
+                                <li><a href="#">입학상담</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="#">대학·대학원</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">인문사회대학</a></li>
+                                <li><a href="#">자연과학대학</a></li>
+                                <li><a href="#">공과대학</a></li>
+                                <li><a href="#">사범대학</a></li>
+                                <li><a href="#">대학원</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="#">학사안내</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">학사일정</a></li>
+                                <li><a href="#">수강신청</a></li>
+                                <li><a href="#">성적</a></li>
+                                <li><a href="#">수료 및 졸업</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="#">대학생활</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">학생회소개</a></li>
+                                <li><a href="#">동아리/스터디</a></li>
+                                <li><a href="#">식단안내</a></li>
+                                <li><a href="#">갤러리</a></li>
+                            </ul>
+                        </li>
+    
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="sub_menu_list">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">뉴스 및 칼럼</a></li>
+                                <li><a href="#">취업정보</a></li>
+                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="#">질문과 답변</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="homebar">
+                <article class="inline">
+                    <a href="/static/common/"><img src="/static/common/images/ico-home.png" alt="homeico"></a>
+                    <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
+                    <a href="/static/Bachelor/BacNotice.html">학사안내</a>
+                    <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
+                    <a href="/static/Bachelor/BacNotice.html">공지사항</a>
+                </article>
+            </div>
+            <main>
+                <article class="side">
+                    <h4>학사안내</h4>
+                        <ul>
+                            <li><a href="/static/Bachelor/BacNotice.html">공지사항</a></li>
+                            <li><a href="/static/Bachelor/BacSchedule.html">학사일정</a></li>
+                            <li><a href="/static/Bachelor/BacSubscribe.html">수강신청</a></li>
+                            <li><a href="/static/Bachelor/BacResult.html">성적</a></li>
+                            <li><a href="/static/Bachelor/BacGrad.html">수료 및 졸업</a></li>
+                            <li><a href="/static/Bachelor/BacQuestion.html">자주묻는질문</a></li>
+                        </ul>
+                </article>
+                <article class="signup">
+                    <div class="signuptop">
+                        <h4>수강신청</h4>
+                    </div>
+                    <div class="duration">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">수강신청기간</h4>
+                        <p>-매학기 수강신청은 개강 전에 실치, 학생은 수강신청 공고를 충분히 숙지한 다음, 수강신청 기간에 인터넷을 통해 신청과목을 입력<br>
+                        -필요한 경우 학과사무실의 학사상담이나 지도교수의 지도를 받을 수 있으며, 반드시 학년별 지정된 날짜에 수강신청 완료<br>
+                        - 자세한 설명은 학사일정 공지사항 게시판 참조</p>
+                    </div>
+                    <div class="score">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">수강신청 학점</h4>
+                        <p>- 학기당 이수학점 : 18학점 이내(논문과목 별도) [대학 학칙  제20조]</p>
+                    </div>
+                    <div class="durationtable">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">학부(과)별 신청 학점 </h4>
+                        <table>
+                            <tr>
+                                <th colspan="2">수강신청 학점수</th>
+                                <th>대상학부(과)</th>
+                            </tr>
+                            <tr>
+                                <td>졸업학점이 130-140학점인 학부(과)</td>
+                                <td>최저 15학점, 최대 21학점</td>
+                                <td>인문대학, 사회과학대학, 경영대학, 공과대학,<br>
+                                    자연과학대학, 간호대학, 글로벌융합대학, 소<br>
+                                    프트웨어융합대학, 미디어스쿨, 데이터과학융<br>
+                                    합스쿨, 나노융합스쿨, 미래융합스쿨</td>
+                            </tr>
+                            <tr>
+                                <td>졸업학점이 130학점인 학부(과)</td>
+                                <td>최저 12학점, 최대 18학점</td>
+                                <td>의과대학 의예과(수료학점은 72이상)</td>
+                            </tr>
+                            <tr>
+                                <td>졸업학점이 150학점인 학부(과)</td>
+                                <td>최저 15학점, 최대 26학점</td>
+                                <td>의과대학 의학과 </td>
+                            </tr>
+                        </table>
+                        <article class="tabletxt">
+                            <p>- 4학년 1학기에는 12학점 이상, 최종학기에는 1과목 이상 수강신청 하여야 한다.<br>
+                                - 직전학기 성적이 3.75 이상인 학생은 최대학점에서 3학점까지 초과 이수할 수 있다.<br>
+                                - 장학생 선발은 직전학기에 평점평균 2.0 이상을 취득하여야 하며, 대학별 기준학점 이상을 이수하여야 한다.(학생지원팀 055-123-1010 문의)</p>
+                        </article>
+                    </div>
+                    <div class="change">
+                        <p>- 수강 신청한 과목을 철회하고자 할 때에는 수업주수 4분의 1이전까지 정해진 기간에 해당 교과목을 해당 사이트를 통하여 철회할 수 있음<br>
+                            - 학기당 2과목까지 철회할 수 있으나, 철회로 수강인원이 폐강기준인원 미만이 되는 교과목은 수강철회를 불허<br>
+                            - 철회 후 수강신청학점이 학기 당 최저 이수학점 이상이 되어야 함</p>
+                    </div>
+                    <div class="signupbutton">
+                        <a href="">수강신청하기 <img src="/static/common/images/bg-link.png" alt=""></a>
+                    </div>
+                </article>
+            </main>
         </div>
         
     </body>
