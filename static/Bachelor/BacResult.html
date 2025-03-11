@@ -4,12 +4,17 @@
         <meta charset="UTF-8">
         <title>공지사항</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <style>
             /* 초기화 */
         * {
             margin: 0;
             padding: 0;
             font: normal 12px "Noto Sans Korean", sans-serif;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
         }
 
         ul,
@@ -159,50 +164,102 @@
             font-size: 15px;
         }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*noticemain*/
-        main .notice .noticemain {
+        /*성적*/
+        main .result {
             width: 100%;
-            height: auto;
-            float: right;
+            max-width: 940px;
+            padding-left: 50px;
+            flex-grow: 1;
         }
-        main .notice .noticemain table {
+        main .result img {
+            margin-right: 8px;
+        }
+        main .result .resulttop {
             width: 100%;
             height: auto;
-            border-top: 2px solid black;
-            margin-top: 20px;
-            border-collapse: collapse;
+            border-bottom: 2px solid black;
+            margin-bottom: 25px;
+        }
+        main .result .resulttop h4 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: black;
+        }
+        main .result .test {
+            width: 100%;
+            height: auto;
             margin-bottom: 20px;
         }
-        main .notice .noticemain table tr:nth-of-type(1) th {
-            padding: 17px 10px;
-            background-color: #FAFAFA;
+        main .result h4 {
+            font-size: 18px;
+            color: #145074;
+            margin-bottom: 5px;
+        }
+        main .result h3 {
+            color: #0067B3;
             font-size: 16px;
-            font-weight: bold;
-            border-bottom: 1px solid #A3A3A3;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
-        main .notice .noticemain table tr td {
+        main .result .test p {
             font-size: 16px;
-            text-align: center;
-            padding: 17px 10px;
-            border-bottom: #D8D8D8 1px solid;
+            color: #666666;
+            line-height: 30px;
         }
-        main .notice .noticemain table tr td img {
-            margin-right: 5px;
-            position: relative;
-            top: 2px;
+        main .result .cheat {
+            width: 100%;
+            height: auto;
+            margin-bottom: 65px;
         }
-        main .notice .noticemain table tr td:nth-of-type(2) {
-            text-align: left;
+        main .result .cheat p {
+            font-size: 16px;
+            color: #666666;
+            font-weight: 10px;
         }
-        
-        main .notice .noticemain .pagebtn {
-            text-align: center;
+        main .result .resulttxt {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
         }
-        main .notice .noticemain .pagebtn a {
-            font-size: 15px;
-            padding: 4px 10px;
+        main .result .resulttxt p {
+            font-size: 16px;
+            color: #333333;
+            line-height: 30px;
+        }
+        main .result .rating {
+            width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+        }
+        main .result .rating table {
+            border-top: 2px solid #071F4B;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        main .result .rating th {
+            background-color: #F4F8FC;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 500;
             border: 1px solid #DEDEDE;
         }
+        main .result .rating td {
+            text-align: center;
+            border: 1px solid #DEDEDE;
+            padding: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+        main .result .rating .lasttxt {
+            margin-top: 13px;
+        }
+        main .result .rating .lasttxt p {
+            font-size: 16px;
+            color: #666666;
+        }
+        
         
         
         </style>
@@ -305,10 +362,100 @@
                             <li><a href="/static/Bachelor/BacQuestion.html">자주묻는질문</a></li>
                         </ul>
                 </article>
-                <article class="notice">
-                    <div class="noticetop">
-                        <h4>수강신청</h4>
+                <article class="result">
+                    <div class="resulttop">
+                        <h4>성적</h4>
                     </div>
+                    <div class="test">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">시험</h4>
+                        <h3>-시험은 정기시험, 비정기시험, 추가시험, 재시험 등으로 구분</h3>
+                        <p>1) 정기시험 : 중간시험과 학기말시험으로 나누며 중간시험은 학기 당 수업일수 2분의 1이 되는 주에 실시하고, 학기말시험은 학기의 최종 주에 실시<br>
+                            2) 비정기시험 : 과제학습, 세미나 등 계속적인 학습활동을 평가하는 시험으로 담당교수의 책임 하에 실시<br>
+                            3) 추가시험 : 질병 또는 부득이한 사정으로 정기시험에 응시할 수 없는 학생은 사유와 증빙서류를 첨부하여 추가시험신청서를 제출</p>
+                    </div>
+                    <div class="cheat">
+                        <h3>-시험 부정행위자의 처리 </h3>
+                        <p>1) 시험 중 부정행위가 적발되면 감독교수는 그 행위내용을 시험지 상단에 기록하고 날인한 후 즉시 총장에게 보고<br>
+                            2) 시험 부정행위자에 대하여는 다음의 내용에 따라 제적 또는 유기정학 처분<br>
+                            └ 시험에 대리로 응시하거나 대리응시를 부탁한 경우<br>
+                            └ 시험지에 다른 사람의 이름을 쓰거나 쓰게 한 경우<br>
+                            └ 부정행위자로 적발되어 징계처분을 받은 사실이 있는 학생이 거듭 부정행위를 한 경우</p>
+                    </div>
+                    <div class="resulttxt">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">성적</h4>
+                        <h3>-평가내용</h3>
+                        <p>1) 성적평가는 각 교과목의 시험성적, 과제평가, 출석상황 및 학습태도 등을 종합하여 평가<br>
+                            2) 출석 및 학습태도 10-20%, 정기시험 50-70%, 비정기시험 및 과제 20-30%로 함을 원칙</p>
+                    </div>
+                    <div class="rating">
+                        <h3>-등급</h3>
+                        <table>
+                            <tr>
+                                <th>등급</th>
+                                <th>평점</th>
+                                <th>백분위 기준점수</th>
+                                <th>비고</th>
+                            </tr>
+                            <tr>
+                                <td>A+</td>
+                                <td>4.5</td>
+                                <td>99</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>4</td>
+                                <td>94</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>B+</td>
+                                <td>3.5</td>
+                                <td>89</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                                <td>3</td>
+                                <td>84</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>C+</td>
+                                <td>2.5</td>
+                                <td>79</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td>2</td>
+                                <td>74</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>D+</td>
+                                <td>1.5</td>
+                                <td>69</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>D</td>
+                                <td>1</td>
+                                <td>64</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>0</td>
+                                <td>59</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <div class="lasttxt">
+                            <p>※ 이수한 교과목의 성적이 D0급 이상 또는 P일 경우는 학점을 취득한 것으로 인정</p>
+                        </div>
+                    </div>
+                    
                     
                 </article>
             </main>
