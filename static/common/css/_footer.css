@@ -1,32 +1,4 @@
 
-/* 초기화 */
-* {
-    margin: 0;
-    padding: 0;
-    font: normal 12px "Noto Sans Korean", sans-serif;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #111;
-}
-
-input,
-textarea {
-    outline: none;
-}
-
-#wrapper {
-    max-width: 1920px;
-    width: 100%;
-    height: auto;
-}
-
 footer {
     width: 100%;
     height: 219px;
@@ -35,21 +7,23 @@ footer {
     font-size: 12px;
 }
 
+.top-footer {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    background-color: #1f2838;
+}
+
+
 .footer-link {
     background: #1f2838;
     height: 50px;
-    width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #333;
-}
-
-.top-footer {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
 }
 
 .footer-link li {
@@ -86,6 +60,10 @@ footer {
     margin: 0 auto;
     display: flex;
     align-items: center;
+}
+
+.footer-contact {
+    color: #A8A9AC;
 }
 
 .footer-dropdown {
