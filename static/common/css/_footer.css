@@ -3,8 +3,6 @@ footer {
     width: 100%;
     height: 219px;
     background: #1a1d21;
-    color: #fff;
-    font-size: 12px;
 }
 
 .top-footer {
@@ -12,18 +10,16 @@ footer {
     width: 100%;
     height: 50px;
     background-color: #1f2838;
+    border-bottom: 1px solid #333;
 }
 
-
 .footer-link {
-    background: #1f2838;
+    max-width: 1400px;
     height: 50px;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #333;
 }
 
 .footer-link li {
@@ -31,7 +27,18 @@ footer {
     float: left;
     line-height: 1;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 65px;
+    box-sizing: border-box;
+}
+
+.footer-link li::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-link li::after {
@@ -54,6 +61,7 @@ footer {
 }
 
 .footer-container {
+    position: relative;
     width: 100%;
     max-width: 1200px;
     height: 169px;
@@ -62,15 +70,30 @@ footer {
     align-items: center;
 }
 
+.footer_logo {
+    margin-bottom: 50px;
+}
+
 .footer-contact {
     color: #A8A9AC;
 }
 
+
 .footer-dropdown {
-    text-align: center;
-    margin-bottom: 10px;
-    float: right;
-    color: #aaa;
+    position: absolute;
+    right: 0px;
+    bottom: 90px;
+    width: 200px;
+    height: 36px;
+    appearance: none;
+    border: none;
+    background: url('/static/common/images/bg-related-arr-open.png') no-repeat right center;
+    background-position: calc(100% - 10px) center;
+    background-color: #121721;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 350;
+    color: #a7a7a7;
 }
 
 .footer-dropdown a {

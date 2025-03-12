@@ -2,74 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>공지사항</title>
+        <title>커뮤니티/공지사항</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
         <link rel="stylesheet" href="/static/common/css/_footer.css">
+        <link rel="stylesheet" href="/static/common/css/homebar.css">
         <style>
-            /* 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            font: normal 12px "Noto Sans Korean", sans-serif;
-        }
 
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #111;
-        }
-
-        input,
-        textarea {
-            outline: none;
-        }
-
-        #wrapper {
-            max-width: 1920px;
-            width: 100%;
-            height: auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*homebar*/
-        .homebar {
-            width: 100%;
-            height: auto;
-            background-color: #ECF2F6;
-            margin-bottom: 60px;
-        }
-        .homebar .inline {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            text-align: right;
-            padding: 5px;
-        }
-        .homebar .inline img:nth-of-type(1) {
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(1) {
-            position: relative;
-            top: 2px;
-        }
-        .homebar .inline a:nth-of-type(2) {
-            margin-right: 10px;
-            position: relative;
-            bottom: 1px;
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(3) {
-            margin-right: 10px;
-            margin-left: 8px;
-            position: relative;
-            bottom: 1px;
-            left: 2px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*메인*/
         main {
             display: flex;
@@ -85,6 +23,7 @@
             flex-shrink: 0;
         }
         main .side h4 {
+            margin-bottom: 10px;
             font-size: 32px;
             font-weight: bold;
         }
@@ -100,6 +39,12 @@
         main .side ul li a {
             font-size: 16px;
         }
+
+        main .side ul .on {
+            background: #3F97F6;
+            color: white;
+        }
+
         main .side ul li:hover {
             background: #3F97F6;
         }
@@ -123,7 +68,7 @@
         main .notice .noticetop h4 {
             font-size: 26px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
         }
  /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*search*/
@@ -153,12 +98,10 @@
         main .search .searchbtn {
             padding: 10px 20px;
             background-color: #3F97F6;
-            border: 1px solid #3F97F6;
+            border: none;
+            color: #fff;
         }
-        main .search .searchbtn a {
-            color: white;
-            font-size: 15px;
-        }
+
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*noticemain*/
         main .notice .noticemain {
@@ -197,6 +140,8 @@
         }
         
         main .notice .noticemain .pagebtn {
+            margin-top: 40px;
+            margin-bottom: 130px;
             text-align: center;
         }
         main .notice .noticemain .pagebtn a {
@@ -294,7 +239,7 @@
                 <article class="inline">
                     <a href="/static/common/"><img src="/static/common/images/ico-home.png" alt="homeico"></a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
-                    <a href="/static/Bachelor/BacNotice.html">학사안내</a>
+                    <a href="/static/Bachelor/BacNotice.html">커뮤니티</a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
                     <a href="/static/Bachelor/BacNotice.html">공지사항</a>
                 </article>
@@ -303,7 +248,7 @@
                 <article class="side">
                     <h4>커뮤니티</h4>
                         <ul>
-                            <li><a href="/static/Community/notice.html">공지사항</a></li>
+                            <li class="on"><a href="/static/Community/notice.html" class="on">공지사항</a></li>
                             <li><a href="/static/Community/news.html">뉴스 및 칼럼</a></li>
                             <li><a href="/static/Community/job.html">취업정보</a></li>
                             <li><a href="/static/Community/free.html">자유게시판</a></li>
@@ -315,7 +260,7 @@
                     <div class="noticetop">
                         <h4>공지사항</h4>
                     </div>
-                    <div class="search">
+                    <form class="search">
                         <select class="dropdown">
                             <option>전체</option>
                             <option>제목</option>
@@ -323,10 +268,8 @@
                             <option>내용</option>
                         </select>
                         <input type="text" value="검색어를 입력해 주세요">
-                        <div class="searchbtn"> 
-                            <a href="">검색</a>
-                        </div>
-                    </div>
+                        <button class="searchbtn">검색</button>
+                    </form>
                     <div class="noticemain">
                         <table>
                             <tr>
@@ -338,21 +281,30 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td><img src="/static/common/images/ico-new01.gif" alt="iconew">2025학년도 1학기 그린장학회 장학생 신청 안내</td>
+                                <td>
+                                    <img src="/static/common/images/ico-new01.gif" alt="iconew">
+                                    2025학년도 1학기 그린장학회 장학생 신청 안내
+                                </td>
                                 <td>학사지원실</td>
                                 <td>24.04.09</td>
                                 <td>160</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td><img src="/static/common/images/ico-new01.gif" alt="iconew">제 42회 학위수여식 안내</td>
+                                <td>
+                                    <img src="/static/common/images/ico-new01.gif" alt="iconew">
+                                    제 42회 학위수여식 안내
+                                </td>
                                 <td>학사지원실</td>
                                 <td>24.04.09</td>
                                 <td>160</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>의료, 인공지능 융합인재 양성사업단 사업설명회</td>
+                                <td>
+                                    <img src="/static/common/images/ico-new01.gif" alt="iconew">
+                                    의료, 인공지능 융합인재 양성사업단 사업설명회
+                                </td>
                                 <td>학사지원실</td>
                                 <td>24.04.09</td>
                                 <td>160</td>
