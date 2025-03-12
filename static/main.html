@@ -43,7 +43,7 @@
         background-color: #f3f5f9;
       }
 
-      .slide {
+      .swiper-slide {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -68,33 +68,44 @@
         background-image: url("/static/common/images/bg-main-vi03.jpg");
       }
 
-      /* 공지사항 & 학사안내 스타일 */
-      .board {
-        display: flex;
-        justify-content: space-between;
-        margin: 40px 0;
+      .swiper-pagination {
+        position: relative;
+        margin-top: -150px;
+        padding-bottom: 150px;
+      }
+      .swiper-pagination-bullet-active {
+        border: 1px solid white;
+        background-color: white;
+      }
+      .swiper-pagination-bullet {
+        border: 1px solid white;
+      }
+      .swiper-button-prev {
+        color: #bbbbbb90;
+      }
+      .swiper-button-next {
+        color: #bbbbbb90;
       }
 
-      .board article {
-        width: 48%;
-        background-color: #3182f6;
-        padding: 20px;
-        color: white;
-        border-radius: 10px;
+      .text-sub {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      .text-main {
+        font-size: 48px;
+        line-height: 58px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .text-subsub {
+        font-size: 16px;
+        font-weight: lighter;
+        line-height: 22px;
       }
 
-      /* 포토 갤러리 스타일 */
-      .photo-gallery {
-        display: flex;
-        gap: 10px;
-        margin-top: 20px;
-      }
-
-      .photo-gallery img {
-        width: 100%;
-        max-width: 280px;
-        border-radius: 8px;
-      }
+      
     </style>
   </head>
 
@@ -191,22 +202,46 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide swiper-slide1">
-              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
-              <p>그린대학교 컴퓨터공학과</p>
-              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
-              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+              <p class="text-sub">IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p class="text-main">그린대학교 컴퓨터공학과</p>
+              <p class="text-subsub">
+                급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의
+                활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양
+              </p>
+              <a href="#"
+                >학과소개 바로가기
+                <img
+                  src="/static/common/images/bg-link-arr.png"
+                  alt="학과소개 바로가기"
+              /></a>
             </div>
             <div class="swiper-slide swiper-slide2">
-              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
-              <p>그린대학교 컴퓨터공학과</p>
-              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
-              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+              <p class="text-sub">IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p class="text-main">그린대학교 컴퓨터공학과</p>
+              <p class="text-subsub">
+                급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의
+                활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양
+              </p>
+              <a href="#"
+                >학과소개 바로가기
+                <img
+                  src="/static/common/images/bg-link-arr.png"
+                  alt="학과소개 바로가기"
+              /></a>
             </div>
             <div class="swiper-slide swiper-slide3">
-              <p>IT기술로 세상을 변화시키는 인재를 양성</p>
-              <p>그린대학교 컴퓨터공학과</p>
-              <p>급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
-              <a href="#">학과소개 바로가기 <img src="/static/common/images/bg-link-arr.png" alt="학과소개 바로가기"/></a>
+              <p class="text-sub">IT기술로 세상을 변화시키는 인재를 양성</p>
+              <p class="text-main">그린대학교 컴퓨터공학과</p>
+              <p class="text-subsub">
+                급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의
+                활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양
+              </p>
+              <a href="#"
+                >학과소개 바로가기
+                <img
+                  src="/static/common/images/bg-link-arr.png"
+                  alt="학과소개 바로가기"
+              /></a>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -214,18 +249,146 @@
           <div class="swiper-button-next"></div>
         </div>
 
-        
+        <div class="bbs-container">
+          <div>
+            <div class="bbs-header">
+              <span>학사안내</span>
+              <a href="#"
+                ><img
+                  src="/static/common/images/bg-viewmore01.png"
+                  alt="더보기"
+              /></a>
+            </div>
+            <ul>
+              <li>
+                <a href="#">교과목 폐지 및 신설 안내 </a><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#"
+                  >2019-2학기 진로취업 프로그램 설계를 위한 학생대상... </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#">제8회 KNDA 학술논문상 공모 </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#">대학 진로취업지원 현황 조사 안내 </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#"
+                  >[진로취업특강] 유망직무 전문가 초청 특강, 여대생 커... </a
+                ><span>2019.05.29</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div>
+              <span>공지사항</span>
+              <a href="#"
+                ><img
+                  src="/static/common/images/bg-viewmore01.png"
+                  alt="더보기"
+              /></a>
+            </div>
+            <ul>
+              <li>
+                <a href="#">교과목 폐지 및 신설 안내 </a><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#"
+                  >2019-2학기 진로취업 프로그램 설계를 위한 학생대상... </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#">제8회 KNDA 학술논문상 공모 </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#">대학 진로취업지원 현황 조사 안내 </a
+                ><span>2019.05.29</span>
+              </li>
+              <li>
+                <a href="#"
+                  >[진로취업특강] 유망직무 전문가 초청 특강, 여대생 커... </a
+                ><span>2019.05.29</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="photo-gallery">
+          <div class="gallery-header">
+            <span>PHOTO - GALLERY</span>
+            <a href="http://"><img src="" alt="" /></a>
+          </div>
+          <div>
+            <div>
+              <a href="http://"
+                ><img
+                  src="/static/common/images/gallary_sample1.jpg"
+                  alt="글로벌 명문대학 그린대학교"
+                />
+                <div>글로벌 명문대학 그린대학교</div></a
+              >
+            </div>
+            <div>
+              <a href="http://"
+                ><img
+                  src="/static/common/images/gallary_sample2.jpg"
+                  alt="글로벌 명문대학 그린대학교"
+                />
+                <div>글로벌 명문대학 그린대학교</div></a
+              >
+            </div>
+            <div>
+              <a href="http://"
+                ><img
+                  src="/static/common/images/gallary_sample3.jpg"
+                  alt="글로벌 명문대학 그린대학교"
+                />
+                <div>글로벌 명문대학 그린대학교</div></a
+              >
+            </div>
+            <div>
+              <a href="http://"
+                ><img
+                  src="/static/common/images/gallary_sample4.png"
+                  alt="글로벌 명문대학 그린대학교"
+                />
+                <div>글로벌 명문대학 그린대학교</div></a
+              >
+            </div>
+            <div>
+              <a href="http://"
+                ><img
+                  src="/static/common/images/gallary_sample5.jpg"
+                  alt="글로벌 명문대학 그린대학교"
+                />
+                <div>글로벌 명문대학 그린대학교</div></a
+              >
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
 </html>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper", {
       loop: true, // 무한 루프
       autoplay: { delay: 3000 }, // 자동 재생
       pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   });
 </script>
