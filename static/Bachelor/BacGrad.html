@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>공지사항</title>
+        <title>수료 및 졸업</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -112,102 +112,177 @@
         }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
         /*공지사항*/
-        main .notice {
+        main .grad {
             width: 100%;
             max-width: 930px;
             padding-left: 60px;
             flex-grow: 1;
         }
-        main .notice .noticetop {
+        main .grad .gradtop {
             width: 100%;
             height: auto;
             border-bottom: 2px solid black;
             margin-bottom: 25px;
         }
-        main .notice .noticetop h4 {
+        main .grad .gradtop h4 {
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 8px;
+            color: black;
+        }
+        main .grad img {
+            margin-right: 8px;
+        }
+        main .grad h4 {
+            font-size: 18px;
+            color: #145074;
+            margin-bottom: 5px;
+        }
+        main .gradstandard {
+            margin-bottom: 50px;
+        }
+        main .gradstandard h4 {
+            margin-bottom: 13px;
+        }
+        main .grad .gradstandard table {
+            border-top: 2px solid #071F4B;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        main .grad .gradstandard th {
+            background-color: #F4F8FC;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #DEDEDE;
+            color: black;
+        }
+        main .grad .gradstandard th:nth-of-type(1) {
+            width: 250px;
+            height: 30px;
+        }
+        main .grad .gradstandard td {
+            text-align: center;
+            border: 1px solid #DEDEDE;
+            padding: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+        main .grad .gradstandard .total {
+            padding: 0;
+            width: 78px;
+        }
+        main .grad .grade th:nth-of-type(1) {
+            width: 136px;
+        }
+        main .grad .grade th:nth-of-type(2) {
+            width: 136px;
+        }
+        main .grad .grade th:nth-of-type(3) {
+            width: 136px;
+        }
+        main .grad .grade th:nth-of-type(4) {
+            width: 136px;
+        }
+        main .grad .getscore {
+            height: 35px;
+        }
+        main .grad .gradstandard p {
+            font-size: 16px;
+            color: #666666;
+            margin-top: 20px;
+        }
+        main .egrad {
+            width: 100%;
+            max-width: 930px;
+            flex-grow: 1;
+        }
+        main .egrad table {
+            border-top: 2px solid #071F4B;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        main .egrad th {
+            background-color: #F4F8FC;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #DEDEDE;
+            color: black;
+        }
+        main .egrad td {
+            text-align: center;
+            border: 1px solid #DEDEDE;
+            padding: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+        main .egrad .secth th:nth-of-type(1) {
+            width: 275px;
+            height: 29px;
+        }
+        main .egrad .secth th:nth-of-type(2) {
+            width: 183px;
+        }
+        main .egrad .secth th:nth-of-type(3) {
+            width: 183px;
+        }
+        main .egrad p {
+            font-size: 16px;
+            color: #666666;
+            margin-top: 20px;
+        }
+        main .graduation {
+            width: 100%;
+            max-width: 930px;
+            flex-grow: 1;
+            margin-bottom: 500px;
+        }
+        main .grad .graduation table {
+            border-top: 2px solid #071F4B;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        main .grad .graduation th {
+            background-color: #F4F8FC;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #DEDEDE;
+            color: black;
+        }
+        main .grad .graduation th:nth-of-type(1) {
+            width: 250px;
+            height: 30px;
+        }
+        main .grad .graduation td {
+            text-align: center;
+            border: 1px solid #DEDEDE;
+            padding: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+        main .grad .graduation .firstth th:nth-of-type(1) {
+            width: 275px;
+        }
+        main .grad .graduation .firstth th:nth-of-type(2) {
+            width: 136px;
+        }
+        main .grad .graduation .secondth th:nth-of-type(1) {
+            width: 136px;
+        }
+        main .grad .graduation .secondth th:nth-of-type(2) {
+            width: 136px;
+        }
+        main .graduation p {
+            font-size: 16px;
+            color: #666666;
+            margin-top: 20px;
         }
  /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*search*/
-        main .search {
-            float: right;
-            display: flex;
-            
-        }
-        main .search .dropdown {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 150px;
-            padding: 10px;
-            margin-right: 5px;
-            border: 1px solid #DEDEDE;
-            color: #666666;
-            font-size: 15px;
-        }
-        main .search input {
-            padding: 10px;
-            width: 237px;
-            border: 1px solid #DEDEDE;
-            color: #666666;
-            font-size: 15px;
-        }
-        main .search .searchbtn {
-            padding: 10px 20px;
-            background-color: #3F97F6;
-            border: 1px solid #3F97F6;
-        }
-        main .search .searchbtn a {
-            color: white;
-            font-size: 15px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*noticemain*/
-        main .notice .noticemain {
-            width: 100%;
-            height: auto;
-            float: right;
-        }
-        main .notice .noticemain table {
-            width: 100%;
-            height: auto;
-            border-top: 2px solid black;
-            margin-top: 20px;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        main .notice .noticemain table tr:nth-of-type(1) th {
-            padding: 17px 10px;
-            background-color: #FAFAFA;
-            font-size: 16px;
-            font-weight: bold;
-            border-bottom: 1px solid #A3A3A3;
-        }
-        main .notice .noticemain table tr td {
-            font-size: 16px;
-            text-align: center;
-            padding: 17px 10px;
-            border-bottom: #D8D8D8 1px solid;
-        }
-        main .notice .noticemain table tr td img {
-            margin-right: 5px;
-            position: relative;
-            top: 2px;
-        }
-        main .notice .noticemain table tr td:nth-of-type(2) {
-            text-align: left;
-        }
-        
-        main .notice .noticemain .pagebtn {
-            text-align: center;
-        }
-        main .notice .noticemain .pagebtn a {
-            font-size: 15px;
-            padding: 4px 10px;
-            border: 1px solid #DEDEDE;
-        }
         
         
         </style>
@@ -293,16 +368,16 @@
                 <article class="inline">
                     <a href="/static/common/"><img src="/static/common/images/ico-home.png" alt="homeico"></a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
-                    <a href="/static/Bachelor/BacNotice.html">학사안내</a>
+                    <a href="/static/Bachelor/Bacgrad.html">학사안내</a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
-                    <a href="/static/Bachelor/BacNotice.html">공지사항</a>
+                    <a href="/static/Bachelor/Bacgrad.html">공지사항</a>
                 </article>
             </div>
             <main>
                 <article class="side">
                     <h4>학사안내</h4>
                         <ul>
-                            <li><a href="/static/Bachelor/BacNotice.html">공지사항</a></li>
+                            <li><a href="/static/Bachelor/Bacgrad.html">공지사항</a></li>
                             <li><a href="/static/Bachelor/BacSchedule.html">학사일정</a></li>
                             <li><a href="/static/Bachelor/BacSubscribe.html">수강신청</a></li>
                             <li><a href="/static/Bachelor/BacResult.html">성적</a></li>
@@ -310,9 +385,157 @@
                             <li><a href="/static/Bachelor/BacQuestion.html">자주묻는질문</a></li>
                         </ul>
                 </article>
-                <article class="notice">
-                    <div class="noticetop">
-                        <h4>수강신청</h4>
+                <article class="grad">
+                    <div class="gradtop">
+                        <h4>수료 및 졸업</h4>
+                    </div>
+                    <div class="gradstandard">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">시험</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">구분</th>
+                                    <th rowspan="2" class="total">총 취득학점</th>
+                                    <th colspan="4" class="getscore">수료 학점</th>
+                                </tr>
+                                <tr class="grade">
+                                    <th>1학년</th>
+                                    <th>2학년</th>
+                                    <th>3학년</th>
+                                    <th>4학년</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>인문대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>66</td>
+                                    <td>99</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>사회과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>66</td>
+                                    <td>99</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>경영대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>66</td>
+                                    <td>99</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>자연과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>66</td>
+                                    <td>99</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>정보과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>66</td>
+                                    <td>99</td>
+                                    <td>130</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <p>- 수료기준 : 졸업학점에 따라 학년별 수료학점이 다르며, 각 학년별 수료학점을 취득한 경우 해당 학년에 대한 ‘수료증명서’를 발급 가능</p>
+                    </div>
+                    <div class="egrad">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">조기졸업</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3">자격</th>
+                                    <th rowspan="2">신청절차</th>
+                                </tr>
+                                <tr class="secth">
+                                    <th>이수학기</th>
+                                    <th>평점평균</th>
+                                    <th>취득학점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6학기 또는 7학기 이수자로서 해당학기
+                                        이수로 모든 졸업요건의 충족이 가능한
+                                        자.</td>
+                                    <td>4.00 이상</td>
+                                    <td>정규졸업 요구학점과 동일</td>
+                                    <td>졸업을 원하는 학기초 30일 이내에 “조기
+                                        졸업신청서”를 교무팀에 제출</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <p>※ 편입생 제외</p>
+                    </div>
+                    <div class="graduation">
+                        <h4><img src="/static/common/images/bullet-h4.png" alt="h4">졸업</h4>
+                        <table>
+                            <thead>
+                                <tr class="firstth">
+                                    <th rowspan="2">소속 단과대학</th>
+                                    <th rowspan="2">총 취득학점</th>
+                                    <th colspan="3">정공 이수 학점</th>
+                                </tr>
+                                <tr class="secondth">
+                                    <th>복수전공(제1전공 기준동일)</th>
+                                    <th>단일전공</th>
+                                    <th>부전공</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>인문대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>60</td>
+                                    <td>제1전공42/부전공21</td>
+                                </tr>
+                                <tr>
+                                    <td>사회과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>60</td>
+                                    <td>제1전공42/부전공21</td>
+                                </tr>
+                                <tr>
+                                    <td>경영대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>60</td>
+                                    <td>제1전공42/부전공21</td>
+                                </tr>
+                                <tr>
+                                    <td>자연과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>70</td>
+                                    <td>제1전공50/부전공25</td>
+                                </tr>
+                                <tr>
+                                    <td>정보과학대학</td>
+                                    <td>130이상</td>
+                                    <td>33</td>
+                                    <td>60</td>
+                                    <td>제1전공42/부전공21</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>-등록학기:8학기 이상, 의과대학 의학과는 12학기 이상<br>
+                            -총 성적평점 평균:2.00 이상<br>
+                            -졸업논문(또는 졸업종합시험):합격</p>
                     </div>
                     
                 </article>
