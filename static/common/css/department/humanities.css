@@ -28,6 +28,9 @@
     height: auto;
     }
 
+
+/* ================================================= */
+
 main {
     display: flex;
     width: 100%;
@@ -80,7 +83,7 @@ aside > p {
 }
 
 article {
-
+    
     width: 990px;
     margin-left: 60px;
     margin-bottom: 90px;
@@ -141,17 +144,11 @@ table {
 .table-hd {
     background: #F4F8FC;
 }
-.table-hd th {
-    font-weight: 700;
-}
-
-.table-bd td {
-    font-weight: 300;
-}
 
 .table-hd > th {
     width: 249.2px;
     height: 40px;
+    font-weight: 700;
     border-right: 1px solid #DEDEDE;
     border-bottom: 1px solid #DEDEDE;
 }
@@ -159,6 +156,7 @@ table {
 .table-bd > td {
     width: 249.2px;
     height: 40px;
+    font-weight: 300;
     border-right: 1px solid #DEDEDE;
     border-bottom: 1px solid #DEDEDE;
 }
