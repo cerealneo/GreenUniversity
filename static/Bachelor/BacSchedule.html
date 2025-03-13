@@ -4,237 +4,11 @@
         <meta charset="UTF-8">
         <title>학사일정</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
+        <link rel="stylesheet" href="/static/common/css/Bachelor/BacSchedule.css">
+        <link rel="stylesheet" href="/static/common/css/_footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-        <style>
-            /* 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            font: normal 12px "Noto Sans Korean", sans-serif;
-            font-family: "Noto Sans KR", sans-serif;
-            font-optical-sizing: auto;
-        }
-
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #111;
-        }
-
-        input,
-        textarea {
-            outline: none;
-        }
-
-        #wrapper {
-            max-width: 1920px;
-            width: 100%;
-            height: auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*homebar*/
-        .homebar {
-            width: 100%;
-            height: auto;
-            background-color: #ECF2F6;
-            margin-bottom: 60px;
-        }
-        .homebar .inline {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            text-align: right;
-            padding: 5px;
-        }
-        .homebar .inline img:nth-of-type(1) {
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(1) {
-            position: relative;
-            top: 2px;
-        }
-        .homebar .inline a:nth-of-type(2) {
-            margin-right: 10px;
-            position: relative;
-            bottom: 1px;
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(3) {
-            margin-right: 10px;
-            margin-left: 8px;
-            position: relative;
-            bottom: 1px;
-            left: 2px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*메인*/
-        main {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*사이드*/
-        main .side {
-            width: 210px;
-            flex-shrink: 0;
-        }
-        main .side h4 {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        main .side ul {
-            text-align: left;
-            border-top: 2px solid black;
-            width: 210px;
-        }
-        main .side ul li {
-            border-bottom: 1px solid #DCDCDC;
-            padding: 20px 15px;
-        }
-        main .side ul li a {
-            font-size: 16px;
-        }
-        main .side ul li:hover {
-            background: #3F97F6;
-        }
-        main .side ul li:hover a {
-            color: white;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*학사일정*/
-        main .schedule {
-            width: 100%;
-            max-width: 940px;
-            padding-left: 50px;
-            flex-grow: 1;
-        }
-        main .schedule .scheduletop {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid black;
-        }
-        main .schedule .scheduletop h4 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        /* 캘린더 컨테이너 */
-        .calendar-container {
-            width: 100%;
-            height: 100%;
-            margin: 0 30px auto;
-            background: #fff;
-            padding: 20px;
-            position: relative;
-            right: 46px;
-        }
-
-        /* 상단 네비게이션 */
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            font-size: 32px;
-            font-weight: bold;
-            color: #003366;
-            margin-bottom: 25px;
-        }
-
-        /* 화살표 버튼 (사용자 이미지 적용 가능) */
-        .nav-btn {
-            width: 12px;
-            height: 30px;
-            cursor: pointer;
-        }
-        .nav-btn:nth-of-type(1) {
-            position: relative;
-            left: 33%;
-            top: 2px;
-        }
-        .nav-btn:nth-of-type(2) {
-            position: relative;
-            right: 33%;
-            top: 2px;
-        }
-        #month-year {
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        /* 달력 테이블 */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-        }
-
-        thead {
-            width: 100%;
-        }
-
-        tbody {
-            width: 100%;
-        }
-
-        td {
-            width: 14.2%;
-            height: 100px;
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-            font-size: 14px;
-            cursor: pointer;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background: #084A87;
-            color: white;
-            text-align: center;
-            font-size: 14px;
-            height: 25px;
-            padding: 12px;
-        }
-        th tr:nth-of-type(1) {
-            border: 1px solid ddd;
-        }
-
-        td {
-            position: relative;
-            background: #ffffff;
-        }
-
-        /* 오늘 요일 강조 */
-        .highlight-today {
-            background: #E6EDF3;
-        }
-
-        /* 이전/다음 달 날짜 스타일 */
-        .other-month {
-            color: #bbb; /* 연한 회색 */
-        }
-
-        /* 하단 공지사항 */
-        .info {
-            font-size: 16px;
-            color: #666666;
-            position: relative;
-            bottom: 115px;
-            left: 3px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/        
-        </style>
     </head>
     <body>
         <div id="wrapper">
@@ -362,9 +136,57 @@
                         </table>
                     </div>
                 
-                    <div class="info">※ 자세한 일정 내용은 공지사항을 참고해주세요.</div>
+                    <div class="info">※ 자세한 일정 내용은 공지사항을 참고하시기 바랍니다.</div>
                 </article>
             </main>
+            <footer>
+                <div class="footer">
+                    <div class="top-footer">
+                        <ul class="footer-link">
+                            <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">통합정보시스템</a></li>
+                            <li><a href="#" target="_blank">학사일정</a></li>
+                            <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                            <li><a href="#" target="_blank">교내공지사항</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-container">
+                        <div class="footer-dropdown">
+                            <a href="#" title="주요사이트 바로가기">주요사이트</a>
+                            <ul>
+                                <li><a href="#" target="_blank">그린대학교</a></li>
+                                <li><a href="#" target="_blank">취업진로지원센터</a></li>
+                                <li><a href="#" target="_blank">현장실습지원센터</a></li>
+                                <li><a href="#" target="_blank">학생생활관</a></li>
+                            </ul>
+                        </div>
+    
+    
+                        <div class="footer-content-box">
+                            <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
+                            <ul class="footer-info">
+                                <li>
+                                    <ul class="footer-contact">
+                                        <li>
+                                            <p>그린대학교</p>
+                                            <p>
+                                                <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
+                                                <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
+                                                <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a>
+                                                    <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         <script>
             let today = new Date();
@@ -446,4 +268,5 @@
             renderCalendar(currentMonth, currentYear);
         </script>
     </body>
+    
 </html>

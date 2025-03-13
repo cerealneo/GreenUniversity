@@ -4,265 +4,11 @@
         <meta charset="UTF-8">
         <title>성적</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
+        <link rel="stylesheet" href="/static/common/css/Bachelor/BacResult.css">
+        <link rel="stylesheet" href="/static/common/css/_footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-        <style>
-            /* 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            font: normal 12px "Noto Sans Korean", sans-serif;
-            font-family: "Noto Sans KR", sans-serif;
-            font-optical-sizing: auto;
-        }
-
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #111;
-        }
-
-        input,
-        textarea {
-            outline: none;
-        }
-
-        #wrapper {
-            max-width: 1920px;
-            width: 100%;
-            height: auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*homebar*/
-        .homebar {
-            width: 100%;
-            height: auto;
-            background-color: #ECF2F6;
-            margin-bottom: 60px;
-        }
-        .homebar .inline {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            text-align: right;
-            padding: 5px;
-        }
-        .homebar .inline img:nth-of-type(1) {
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(1) {
-            position: relative;
-            top: 2px;
-        }
-        .homebar .inline a:nth-of-type(2) {
-            margin-right: 10px;
-            position: relative;
-            bottom: 1px;
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(3) {
-            margin-right: 10px;
-            margin-left: 8px;
-            position: relative;
-            bottom: 1px;
-            left: 2px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*메인*/
-        main {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*사이드*/
-        main .side {
-            width: 210px;
-            flex-shrink: 0;
-        }
-        main .side h4 {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        main .side ul {
-            text-align: left;
-            border-top: 2px solid black;
-            width: 210px;
-        }
-        main .side ul li {
-            border-bottom: 1px solid #DCDCDC;
-            padding: 20px 15px;
-        }
-        main .side ul li a {
-            font-size: 16px;
-        }
-        main .side ul li:hover {
-            background: #3F97F6;
-        }
-        main .side ul li:hover a {
-            color: white;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*공지사항*/
-        main .notice {
-            width: 100%;
-            max-width: 930px;
-            padding-left: 60px;
-            flex-grow: 1;
-        }
-        main .notice .noticetop {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid black;
-            margin-bottom: 25px;
-        }
-        main .notice .noticetop h4 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
- /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*search*/
-        main .search {
-            float: right;
-            display: flex;
-            
-        }
-        main .search .dropdown {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 150px;
-            padding: 10px;
-            margin-right: 5px;
-            border: 1px solid #DEDEDE;
-            color: #666666;
-            font-size: 15px;
-        }
-        main .search input {
-            padding: 10px;
-            width: 237px;
-            border: 1px solid #DEDEDE;
-            color: #666666;
-            font-size: 15px;
-        }
-        main .search .searchbtn {
-            padding: 10px 20px;
-            background-color: #3F97F6;
-            border: 1px solid #3F97F6;
-        }
-        main .search .searchbtn a {
-            color: white;
-            font-size: 15px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*성적*/
-        main .result {
-            width: 100%;
-            max-width: 940px;
-            padding-left: 50px;
-            flex-grow: 1;
-        }
-        main .result img {
-            margin-right: 8px;
-        }
-        main .result .resulttop {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid black;
-            margin-bottom: 25px;
-        }
-        main .result .resulttop h4 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: black;
-        }
-        main .result .test {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        main .result h4 {
-            font-size: 18px;
-            color: #145074;
-            margin-bottom: 5px;
-        }
-        main .result h3 {
-            color: #0067B3;
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        main .result .test p {
-            font-size: 16px;
-            color: #666666;
-            line-height: 30px;
-        }
-        main .result .cheat {
-            width: 100%;
-            height: auto;
-            margin-bottom: 65px;
-        }
-        main .result .cheat p {
-            font-size: 16px;
-            color: #666666;
-            font-weight: 10px;
-        }
-        main .result .resulttxt {
-            width: 100%;
-            height: auto;
-            margin-bottom: 30px;
-        }
-        main .result .resulttxt p {
-            font-size: 16px;
-            color: #333333;
-            line-height: 30px;
-        }
-        main .result .rating {
-            width: 100%;
-            height: auto;
-            margin-bottom: 50px;
-        }
-        main .result .rating table {
-            border-top: 2px solid #071F4B;
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-        }
-        main .result .rating th {
-            background-color: #F4F8FC;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #DEDEDE;
-        }
-        main .result .rating td {
-            text-align: center;
-            border: 1px solid #DEDEDE;
-            padding: 10px;
-            font-size: 16px;
-            color: #333333;
-        }
-        main .result .rating .lasttxt {
-            margin-top: 13px;
-        }
-        main .result .rating .lasttxt p {
-            font-size: 16px;
-            color: #666666;
-        }
-        
-        
-        
-        </style>
     </head>
     <body>
         <div id="wrapper">
@@ -459,6 +205,54 @@
                     
                 </article>
             </main>
+            <footer>
+                <div class="footer">
+                    <div class="top-footer">
+                        <ul class="footer-link">
+                            <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">통합정보시스템</a></li>
+                            <li><a href="#" target="_blank">학사일정</a></li>
+                            <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                            <li><a href="#" target="_blank">교내공지사항</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-container">
+                        <div class="footer-dropdown">
+                            <a href="#" title="주요사이트 바로가기">주요사이트</a>
+                            <ul>
+                                <li><a href="#" target="_blank">그린대학교</a></li>
+                                <li><a href="#" target="_blank">취업진로지원센터</a></li>
+                                <li><a href="#" target="_blank">현장실습지원센터</a></li>
+                                <li><a href="#" target="_blank">학생생활관</a></li>
+                            </ul>
+                        </div>
+    
+    
+                        <div class="footer-content-box">
+                            <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
+                            <ul class="footer-info">
+                                <li>
+                                    <ul class="footer-contact">
+                                        <li>
+                                            <p>그린대학교</p>
+                                            <p>
+                                                <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
+                                                <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
+                                                <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a>
+                                                    <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         
     </body>

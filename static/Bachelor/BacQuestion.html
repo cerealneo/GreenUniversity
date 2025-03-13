@@ -4,271 +4,11 @@
         <meta charset="UTF-8">
         <title>자주묻는질문</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
+        <link rel="stylesheet" href="/static/common/css/Bachelor/BacQuestion.css">
+        <link rel="stylesheet" href="/static/common/css/_footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-        <style>
-            /* 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            font: normal 12px "Noto Sans Korean", sans-serif;
-            font-family: "Noto Sans KR", sans-serif;
-            font-optical-sizing: auto;
-        }
-
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #111;
-        }
-
-        input,
-        textarea {
-            outline: none;
-        }
-
-        #wrapper {
-            max-width: 1920px;
-            width: 100%;
-            height: auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*homebar*/
-        .homebar {
-            width: 100%;
-            height: auto;
-            background-color: #ECF2F6;
-            margin-bottom: 60px;
-        }
-        .homebar .inline {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            text-align: right;
-            padding: 5px;
-        }
-        .homebar .inline img:nth-of-type(1) {
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(1) {
-            position: relative;
-            top: 2px;
-        }
-        .homebar .inline a:nth-of-type(2) {
-            margin-right: 10px;
-            position: relative;
-            bottom: 1px;
-            margin-left: 8px;
-        }
-        .homebar .inline a:nth-of-type(3) {
-            margin-right: 10px;
-            margin-left: 8px;
-            position: relative;
-            bottom: 1px;
-            left: 2px;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*메인*/
-        main {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 0 auto;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*사이드*/
-        main .side {
-            width: 210px;
-            flex-shrink: 0;
-        }
-        main .side h4 {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        main .side ul {
-            text-align: left;
-            border-top: 2px solid black;
-            width: 210px;
-        }
-        main .side ul li {
-            border-bottom: 1px solid #DCDCDC;
-            padding: 20px 15px;
-        }
-        main .side ul li a {
-            font-size: 16px;
-        }
-        main .side ul li:hover {
-            background: #3F97F6;
-        }
-        main .side ul li:hover a {
-            color: white;
-        }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-        /*공지사항*/
-        main .question {
-            width: 100%;
-            max-width: 930px;
-            padding-left: 60px;
-            flex-grow: 1;
-        }
-        main .question .questiontop {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid black;
-            margin-bottom: 45px;
-        }
-        main .question .questiontop h4 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: black;
-        }
-        main .question img {
-            margin-right: 8px;
-        }
-        main .leavereturn {
-            margin-bottom: 40px;
-        }
-        main .leavereturn h4 {
-            font-size: 18px;
-            color: #145074;
-            margin-bottom: 8px;
-        }
-        main .leavereturn ul {
-            width: 100%;
-            height: auto;
-            border-top: 2px solid black;
-        }
-        main .leavereturn ul li {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            
-        }
-        main .leavereturn ul li:nth-of-type(2) {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            background-color: #EFEFEF;
-        }
-        main .leavereturn ul li:nth-of-type(2) a{
-            background-color: #999999;
-        }
-        main .leavereturn ul li a {
-            display: flex;
-            background-color: #3282D3;
-            color: white;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            bottom: 3px;
-            align-items: center;
-            justify-content: center;
-            margin-right: 5px;
-        }
-        main .academic {
-            margin-bottom: 40px;
-        }
-        main .academic h4 {
-            font-size: 18px;
-            color: #145074;
-            margin-bottom: 8px;
-        }
-        main .academic ul {
-            width: 100%;
-            height: auto;
-            border-top: 2px solid black;
-        }
-        main .academic ul li {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            
-        }
-        main .academic ul li:nth-of-type(2) {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            background-color: #EFEFEF;
-        }
-        main .academic ul li:nth-of-type(2) a{
-            background-color: #999999;
-        }
-        main .academic ul li a {
-            display: flex;
-            background-color: #3282D3;
-            color: white;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            bottom: 3px;
-            align-items: center;
-            justify-content: center;
-            margin-right: 5px;
-        }
-        main .register {
-            margin-bottom: 40px;
-        }
-        main .register h4 {
-            font-size: 18px;
-            color: #145074;
-            margin-bottom: 8px;
-        }
-        main .register ul {
-            width: 100%;
-            height: auto;
-            border-top: 2px solid black;
-        }
-        main .register ul li {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            
-        }
-        main .register ul li:nth-of-type(4) {
-            display: flex;
-            padding: 20px;
-            font-size: 16px;
-            color: #333333;
-            border-bottom: 1px solid #D8D8D8;
-            background-color: #EFEFEF;
-        }
-        main .register ul li:nth-of-type(4) a{
-            background-color: #999999;
-        }
-        main .register ul li a {
-            display: flex;
-            background-color: #3282D3;
-            color: white;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            bottom: 3px;
-            align-items: center;
-            justify-content: center;
-            margin-right: 5px;
-        }
-        
- /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
- 
-        </style>
     </head>
     <body>
         <div id="wrapper">
@@ -360,7 +100,7 @@
                 <article class="side">
                     <h4>학사안내</h4>
                         <ul>
-                            <li><a href="/static/Bachelor/Bacquestion.html">공지사항</a></li>
+                            <li><a href="/static/Bachelor/BacNotice.html">공지사항</a></li>
                             <li><a href="/static/Bachelor/BacSchedule.html">학사일정</a></li>
                             <li><a href="/static/Bachelor/BacSubscribe.html">수강신청</a></li>
                             <li><a href="/static/Bachelor/BacResult.html">성적</a></li>
@@ -403,6 +143,54 @@
                     
                 </article>
             </main>
+            <footer>
+                <div class="footer">
+                    <div class="top-footer">
+                        <ul class="footer-link">
+                            <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">통합정보시스템</a></li>
+                            <li><a href="#" target="_blank">학사일정</a></li>
+                            <li><a href="#" target="_blank">주요민원 연락처</a></li>
+                            <li><a href="#" target="_blank">교내공지사항</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-container">
+                        <div class="footer-dropdown">
+                            <a href="#" title="주요사이트 바로가기">주요사이트</a>
+                            <ul>
+                                <li><a href="#" target="_blank">그린대학교</a></li>
+                                <li><a href="#" target="_blank">취업진로지원센터</a></li>
+                                <li><a href="#" target="_blank">현장실습지원센터</a></li>
+                                <li><a href="#" target="_blank">학생생활관</a></li>
+                            </ul>
+                        </div>
+    
+    
+                        <div class="footer-content-box">
+                            <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
+                            <ul class="footer-info">
+                                <li>
+                                    <ul class="footer-contact">
+                                        <li>
+                                            <p>그린대학교</p>
+                                            <p>
+                                                <span>[12345] 부산광역시 부산진구 부전대로 123 그린대학교 / </span>
+                                                <span>대표전화 : <a href="tel:051-123-1000">051-123-1000 / </a></span><br>
+                                                <span>입학안내 : <a href="tel:051-123-1302">051-123-1302</a>
+                                                    <span>팩스 : <a href="tel:051-123-3333">051-123-3333</a> </span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="copyright">copyright(C)Green University All Rights Reserved.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         
     </body>
