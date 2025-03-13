@@ -109,10 +109,11 @@ position: absolute;
 top: 40px;
 background-color: #007bff;
 width: 150px;
+z-index: 100;
 }
 
 #quickmenu .sub_menu_list li {
-background-color: #3F97F6;
+background-color: #3f97f6;
 padding: 6px;
 text-align: left;
 border-bottom: 1px solid rgba(255, 255, 255, 0.3);
