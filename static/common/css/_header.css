@@ -1,149 +1,154 @@
-
 /* 초기화 */
 * {
-margin: 0;
-padding: 0;
-font: normal 12px "Noto Sans Korean", sans-serif;
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans Korean", sans-serif;
 }
 
 ul,
 ol {
-list-style: none;
+    list-style: none;
 }
 
 a {
-text-decoration: none;
-color: #111;
+    text-decoration: none;
+    color: #111;
 }
 
 input,
 textarea {
-outline: none;
+    outline: none;
 }
 
 #wrapper {
-max-width: 1920px;
-width: 100%;
-height: auto;
+    width: 100%;
+    height: auto;
 }
 
 /*헤더*/
 header {
-width: 100%;
-height: auto;
-margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 1000;
+    background-color: #fff;
 }
 
 .nav {
-background-color: #3F97F6;
-display: flex;
-width: 100%;
-padding: 4px 0;
+    background-color: #3F97F6;
+    display: flex;
+    width: 100%;
+    height: 25px;
 }
 
 .nav>.navbar {
-width: 100%;
-max-width: 1200px;
-padding: 4px 0;
-margin: 0 auto;
-display: flex;
-justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    padding: 4px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav>.navbar>.navbar-item {}
 
 .nav>.navbar>.navbar-item:not(:last-child)::after {
-content: "|";
-color: white;
-margin: 0 15px;
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 15px;
+    border-left: 1px solid #fff;
 }
 
 .nav>.navbar>.navbar-item>a {
-text-align: center;
-color: white;
-display: inline-block;
-position: relative;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    position: relative;
 }
 
 
 .headerbar {
-width: 100%;
-max-width: 1200px;
-height: 60px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 59px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
 header .headerbar img {
-position: relative;
+    position: relative;
 }
 
 /* 메뉴바 */
 #quickmenu {
-float: right;
-display: flex;
-gap: 20px;
+    float: right;
+    display: flex;
+    gap: 20px;
 }
 
 #quickmenu>li {
-text-align: center;
-margin-right: 5px;
-position: relative;
+    text-align: center;
+    margin-right: 5px;
+    position: relative;
 }
 
 #quickmenu>li>a {
-font-size: 16px;
-font-weight: bold;
-padding: 10px;
-display: block;
-transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    transition: 0.3s;
 }
 
 /* 서브메뉴바 */
 #quickmenu .sub_menu_list {
-display: none;
-position: absolute;
-top: 40px;
-background-color: #007bff;
-width: 150px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #007bff;
+    width: 150px;
 }
 
 #quickmenu .sub_menu_list li {
-background-color: #3F97F6;
-padding: 6px;
-text-align: left;
-border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #3F97F6;
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#quickmenu > li:not(:last-child) > .sub_menu_list:not(:last-child) {
-left: 0px;
+#quickmenu>li:not(:last-child)>.sub_menu_list:not(:last-child) {
+    left: 0px;
 }
 
-#quickmenu > li:last-child > .sub_menu_list {
-right: 0px;
+#quickmenu>li:last-child>.sub_menu_list {
+    right: 0px;
 }
 
 .sub_menu_list li:last-child {
-border-bottom: none;
+    border-bottom: none;
 }
 
 .sub_menu_list li a {
-color: white;
-padding: 5px;
-display: block;
-width: 100%;
-font-size: 16px;
-font-weight: bold;
+    color: white;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 
 .sub_menu_list li:last-child a {
-border-bottom: none;
+    border-bottom: none;
 }
 
 #quickmenu>li:hover .sub_menu_list {
-display: block;
+    display: block;
 }
