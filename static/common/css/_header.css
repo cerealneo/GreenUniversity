@@ -112,7 +112,6 @@ header .headerbar img {
     top: 40px;
     background-color: #007bff;
     width: 150px;
-    z-index: 100;
 }
 
 #quickmenu .sub_menu_list li {

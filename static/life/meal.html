@@ -70,57 +70,14 @@
                 margin-top: 20px;
             }
 
-            .page {
-                display: flex;
-                margin-left: 260px;
-                margin-bottom: 20px;
+            #calendar {
+                max-width: 930px;
+                border: 1px solid black;
             }
 
-            .page > a {
-                margin: 10px 30px;
-            }
-
-            .page > * {
-                font-size: 20px;
-                font-weight: 700;
-                text-align: center;
-            }
+ 
 
 
-            .meal {
-                height: 350px;
-                border-collapse: collapse;
-                box-sizing: border-box;
-                
-            }
-
-            .meal td, th {
-                width: 130px;
-                border: 1px solid #DCDCDC;
-                text-align: center;
-                padding: 0 10px;
-            }
-
-            .meal th {
-                background-color: #3F97F6;
-                color: #FFF;
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            .meal tr:first-child th:first-child,
-            .meal tr td:first-child {
-                font-weight: 700;
-            }
-
-            .meal td span {
-                display: inline-block;
-                padding: 1px 2px;
-                margin-bottom: 8px;
-                border: 1px solid green;
-                color: green;
-                box-sizing: border-box;
-            }
 
         </style>
     </head>
@@ -223,114 +180,87 @@
                 <section>
                     <span>식단안내</span>
                     <article>
-                        <div class="page">
-                            <a href="#"><</a>
-                            <p>
-                                03월 17일 ~ 03월 22일<br>
-                                그린회관 학생 식단
-                            </p>
-                            <a href="#">></a>
+                        <div class="calendar-header">
+                            <img src="/static/common/images/btn-calendar-prev.gif" class="nav-btn" onclick="prevWeek()"> <!-- 좌측 화살표 -->
+                            <h2 id="month-year"></h2>
+                            <img src="/static/common/images/btn-calendar-next.gif" class="nav-btn" onclick="nextWeek()"> <!-- 우측 화살표 -->
                         </div>
-                        <table class="meal">
-                            <tr>
-                                <th>구분</th>
-                                <th>
-                                    월<br>
-                                    <span>2025.03.17</span>
-                                </th>
-                                <th>
-                                    화<br>
-                                    <span>2025.03.18</span>
-                                </th>
-                                <th>
-                                    수<br>
-                                    <span>2025.03.19</span>
-                                </th>
-                                <th>
-                                    목<br>
-                                    <span>2025.03.20</span>
-                                </th>
-                                <th>
-                                    금<br>
-                                    <span>2025.03.21</span>
-                                </th>
-                                <th>
-                                    토<br>
-                                    <span>2025.03.22</span>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>조식<br>미운영</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>중식<br>11:00 ~ 15:00</td>
-                                <td>
-                                    <span>정식-5,500원</span><br>
-                                    잡곡밥<br>
-                                    꼬지어묵국<br>
-                                    맛동산탕수육<br>
-                                    알감자버터구이<br>
-                                    쫄면야채무침<br>
-                                    상추겉절이<br>
-                                    포기김치
-                                </td>
-                                <td>
-                                    <span>정식-5,500원</span><br>
-                                    백미밥<br>
-                                    호박된장국<br>
-                                    돈육김치찜<br>
-                                    모듬잡채<br>
-                                    비엔나햄볶음<br>
-                                    콩나물무침<br>
-                                    포기김치
-                                </td>
-                                <td>
-                                    <span>정식-5,500원</span><br>
-                                    백미밥<br>
-                                    반계탕<br>
-                                    미트볼떡갈비데리야끼조림<br>
-                                    사각어묵매콤무침<br>
-                                    상추치커리겉절이<br>
-                                    포기김치
-                                </td>
-                                <td>
-                                    <span>정식-5,500원</span><br>
-                                    백미밥<br>
-                                    홍합탕<br>
-                                    치킨치즈가스/소스<br>
-                                    마파두부<br>
-                                    잡채어묵조림<br>
-                                    꼬시레기무생채<br>
-                                    포기김치    
-                                </td>
-                                <td>
-                                    <span>정식-5,500원</span><br>
-                                    강황밥<br>
-                                    콩나물김치국<br>
-                                    순살닭떡조림<br>
-                                    해시브라운/케찹<br>
-                                    실곤약야채샐러드<br>
-                                    열무겉절이<br>
-                                    포기김치
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>석식<br>미운영</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <table id="calendar">
+                            <tbody id="calendar-body">
+                                <tr>
+                                    <td>조식</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                </tr>
+                                <tr>
+                                    <td>중식<br>11:00 ~ 15:00</td>
+                                    <td>
+                                        <span>정식-5,500원</span><br>
+                                        잡곡밥<br>
+                                        꼬지어묵국<br>
+                                        맛동산탕수육<br>
+                                        알감자버터구이<br>
+                                        쫄면야채무침<br>
+                                        상추겉절이<br>
+                                        포기김치
+                                    </td>
+                                    <td>
+                                        <span>정식-5,500원</span><br>
+                                        백미밥<br>
+                                        호박된장국<br>
+                                        돈육김치찜<br>
+                                        모듬잡채<br>
+                                        비엔나햄볶음<br>
+                                        콩나물무침<br>
+                                        포기김치
+                                    </td>
+                                    <td>
+                                        <span>정식-5,500원</span><br>
+                                        백미밥<br>
+                                        반계탕<br>
+                                        미트볼떡갈비데리야끼조림<br>
+                                        사각어묵매콤무침<br>
+                                        상추치커리겉절이<br>
+                                        포기김치
+                                    </td>
+                                    <td>
+                                        <span>정식-5,500원</span><br>
+                                        백미밥<br>
+                                        홍합탕<br>
+                                        치킨치즈가스/소스<br>
+                                        마파두부<br>
+                                        잡채어묵조림<br>
+                                        꼬시레기무생채<br>
+                                        포기김치
+                                    </td>
+                                    <td>
+                                        <span>정식-5,500원</span><br>
+                                        강황밥<br>
+                                        콩나물김치국<br>
+                                        순살닭떡조림<br>
+                                        해시브라운/케찹<br>
+                                        실곤약야채샐러드<br>
+                                        열무겉절이<br>
+                                        포기김치
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>석식</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                    <td>미운영</td>
+                                </tr>
+                            </tbody>
                         </table>
+                        
                     </article>
                 </section>
             </main>
@@ -378,6 +308,59 @@
                     </div>
                 </div>
             </footer>
-        </div>
+        </div>  
+        
+        <script>
+            let today = new Date();
+            let currentWeekStartDate = new Date(2025, 2, 10); // 3월 10일부터 시작
+            
+            function formatDate(date) {
+                let year = date.getFullYear();
+                let month = ("0" + (date.getMonth() + 1)).slice(-2);
+                let day = ("0" + date.getDate()).slice(-2);
+                return `${year}.${month}.${day}`;
+            }
+    
+            function renderCalendar(startDate) {
+                let weekDates = [];
+                for (let i = 0; i < 7; i++) { // 일요일부터 토요일까지
+                    let date = new Date(startDate);
+                    date.setDate(startDate.getDate() + i);
+                    weekDates.push(new Date(date));
+                }
+    
+                let calendarBody = document.getElementById("calendar-body");
+                let monthYearHeader = document.getElementById("month-year");
+    
+                // 금요일까지만 표시 (7일 중 6일까지만)
+                let startFormatted = formatDate(weekDates[0]);
+                let endFormatted = formatDate(weekDates[5]); // 금요일까지만
+                monthYearHeader.innerText = `${startFormatted} ~ ${endFormatted}`;
+    
+                let row = document.createElement("tr");
+                weekDates.forEach((date, index) => {
+                    // 토요일까지만 표시
+                    if (index < 6) {
+                        let cell = document.createElement("td");
+                        cell.innerText = formatDate(date);
+                        row.appendChild(cell);
+                    }
+                });
+                calendarBody.appendChild(row);
+            }
+    
+            function prevWeek() {
+                currentWeekStartDate.setDate(currentWeekStartDate.getDate() - 7);
+                renderCalendar(currentWeekStartDate);
+            }
+    
+            function nextWeek() {
+                currentWeekStartDate.setDate(currentWeekStartDate.getDate() + 7);
+                renderCalendar(currentWeekStartDate);
+            }
+    
+            renderCalendar(currentWeekStartDate);
+        </script>
+        
     </body>
 </html>
