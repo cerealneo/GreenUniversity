@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식단 달력</title>
+    <style>
+        .other-month {
+            color: gray;
+        }
+        #calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #calendar td {
+            width: 14.28%;
+            height: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #calendar tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        #calendar td:first-child {
+            background-color: #f9f9f9;
+        }
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .nav-btn {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-header">
+        <img src="/static/common/images/btn-calendar-prev.gif" class="nav-btn" onclick="prevWeek()"> <!-- 좌측 화살표 -->
+        <h2 id="month-year"></h2>
+        <img src="/static/common/images/btn-calendar-next.gif" class="nav-btn" onclick="nextWeek()"> <!-- 우측 화살표 -->
+    </div>
+    <table id="calendar">
+        <thead id="calendar-header"></thead> <!-- 날짜가 들어갈 곳 -->
+        <tbody id="calendar-body">
+            <tr>
+                <td>조식</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+            </tr>
+            <tr>
+                <td>중식<br>11:00 ~ 15:00</td>
+                <td>
+                    <span>정식-5,500원</span><br>
+                    잡곡밥<br>
+                    꼬지어묵국<br>
+                    맛동산탕수육<br>
+                    알감자버터구이<br>
+                    쫄면야채무침<br>
+                    상추겉절이<br>
+                    포기김치
+                </td>
+                <td>
+                    <span>정식-5,500원</span><br>
+                    백미밥<br>
+                    호박된장국<br>
+                    돈육김치찜<br>
+                    모듬잡채<br>
+                    비엔나햄볶음<br>
+                    콩나물무침<br>
+                    포기김치
+                </td>
+                <td>
+                    <span>정식-5,500원</span><br>
+                    백미밥<br>
+                    반계탕<br>
+                    미트볼떡갈비데리야끼조림<br>
+                    사각어묵매콤무침<br>
+                    상추치커리겉절이<br>
+                    포기김치
+                </td>
+                <td>
+                    <span>정식-5,500원</span><br>
+                    백미밥<br>
+                    홍합탕<br>
+                    치킨치즈가스/소스<br>
+                    마파두부<br>
+                    잡채어묵조림<br>
+                    꼬시레기무생채<br>
+                    포기김치
+                </td>
+                <td>
+                    <span>정식-5,500원</span><br>
+                    강황밥<br>
+                    콩나물김치국<br>
+                    순살닭떡조림<br>
+                    해시브라운/케찹<br>
+                    실곤약야채샐러드<br>
+                    열무겉절이<br>
+                    포기김치
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>석식</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+                <td>미운영</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let today = new Date();
+        let currentWeekStartDate = new Date(2025, 2, 10); // 3월 10일부터 시작
+        
+        function formatDate(date) {
+            let year = date.getFullYear();
+            let month = ("0" + (date.getMonth() + 1)).slice(-2);
+            let day = ("0" + date.getDate()).slice(-2);
+            return `${year}.${month}.${day}`;
+        }
+
+        function renderCalendar(startDate) {
+            let weekDates = [];
+            for (let i = 0; i < 7; i++) { // 일요일부터 토요일까지
+                let date = new Date(startDate);
+                date.setDate(startDate.getDate() + i);
+                weekDates.push(new Date(date));
+            }
+
+            let calendarHeader = document.getElementById("calendar-header");
+            let monthYearHeader = document.getElementById("month-year");
+
+            // 금요일까지만 표시 (7일 중 6일까지만)
+            let startFormatted = formatDate(weekDates[0]);
+            let endFormatted = formatDate(weekDates[5]); // 금요일까지만
+            monthYearHeader.innerText = `${startFormatted} ~ ${endFormatted}`;
+
+            // 날짜를 상단의 헤더에 추가
+            let headerRow = document.createElement("tr");
+            weekDates.forEach((date, index) => {
+                if (index < 6) { // 금요일까지만 표시
+                    let cell = document.createElement("td");
+                    cell.innerText = formatDate(date);
+                    headerRow.appendChild(cell);
+                }
+            });
+            calendarHeader.innerHTML = ''; // 기존 헤더 지우고
+            calendarHeader.appendChild(headerRow); // 새로운 날짜 행 추가
+        }
+
+        function prevWeek() {
+            currentWeekStartDate.setDate(currentWeekStartDate.getDate() - 7);
+            renderCalendar(currentWeekStartDate);
+        }
+
+        function nextWeek() {
+            currentWeekStartDate.setDate(currentWeekStartDate.getDate() + 7);
+            renderCalendar(currentWeekStartDate);
+        }
+
+        renderCalendar(currentWeekStartDate);
+    </script>
+</body>
+</html>
