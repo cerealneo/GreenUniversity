@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/static/common/css/homebar.css">
     <link rel="stylesheet" href="/static/common/css/Introduction/introduction.css">
     <link rel="stylesheet" href="/static/Admission/css/admission.css">
+    <style>
     
+
+    </style>
 </head>
 <!---------------------헤더------------------------------->
 <body>
@@ -24,7 +27,7 @@
                 </div>
             </div>
             <div class="headerbar">
-                <a href="#"><img src="./images/header_logo.png" alt="그린대학교"></a>
+                <a href="#"><img src="/static/common/images/header_logo.png" alt="그린대학교"></a>
                 <ul id="quickmenu">
                     <li><a href="#">대학소개</a>
                         <ul class="sub_menu_list">
@@ -104,22 +107,33 @@
 <!---------------------사이드바------------------------------>
 <main>
         
-    <section class="sidebar">
-        <aside>
-            <h2>입학안내</h2>
-            <ul class="menu">
-                <li><a href="#" class="on">공지사항</a></li>
+    <article class="side">
+        <h2>입학안내</h2>
+            <ul>
+                <li style="background-color: #3F97F6;"><a href="#" class="on">공지사항</a></li>
                 <li><a href="#" >수시모집</a></li>
                 <li><a href="#" >정시모집</a></li>
                 <li><a href="#" >편입학</a></li>
                 <li><a href="#" >입학상담</a></li>
             </ul>
-        </aside>
-    </section>
-    
-<!-----------------------본문---------------------------------->
-    <section class="content">
-        <h1>공지사항</h1>
+    </article>
+    <article class="notice">
+        <div class="noticetop">
+            <h4>공지사항</h4>
+        </div>
+        <div class="search">
+            <select class="dropdown">
+                <option>전체</option>
+                <option>제목</option>
+                <option>작성자</option>
+                <option>내용</option>
+            </select>
+            <input type="text" value="검색어를 입력해 주세요">
+            <div class="searchbtn"> 
+                <a href="">검색</a>
+            </div>
+        </div>
+<!---------------------본문------------------------------>
         <div class="noticemain">
             <table>
                 <tr>
@@ -161,7 +175,7 @@
                 <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
             </article>
         </div>
-    </section>
+    </article>
     
 </main>
 <!--------------------------푸터-------------------------------->
