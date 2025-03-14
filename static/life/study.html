@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>대학생활/동아리/스터디</title>
+        <title>학교생활/동아리/스터디</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
         <link rel="stylesheet" href="/static/common/css/_footer.css">
         <link rel="stylesheet" href="/static/common/css/homebar.css">
@@ -12,7 +12,7 @@
                 width: 100%;
                 max-width: 1200px;
                 height: auto;
-                min-height: 540px;
+                min-height: 754px;
                 margin: 0 auto;
             }
 
@@ -68,6 +68,57 @@
 
             section > article {
                 margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 18.5px;
+            }
+
+            article > div {
+                width: 297px;
+                height: 284px;
+            }
+
+            article > div > img {
+                width: 100%;
+                height: 220px;
+            }
+
+            article > div > a {
+                display: block;
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            article > div > ul {
+                display: flex;
+                color: #888;
+                font-size: 13px;
+            }
+
+            .page {
+                display: flex;
+                margin-left: 330px;
+                gap: 3px;
+            }
+
+            .prev {margin-right: 5px;}
+            .next {margin-left: 5px;}
+
+            .page > a {
+                width: 32px;
+                height: 32px;
+                border: 1px solid #DEDEDE;
+                box-sizing: border-box;
+                color: #888;
+                text-align: center;
+                line-height: 32px;
+                margin-top: 30px;
+                margin-bottom: 80px;
+            }
+
+            .page > a:hover {
+                background-color: #3F97F6;
+                color: #FFF;
             }
         
         </style>
@@ -160,17 +211,81 @@
             </div>
             <main>
                 <aside>
-                    <span>동아리/스터디</span>
+                    <span>대학생활</span>
                     <nav>
                         <a href="/static/life/council.html">학생회 소개</a>
-                        <a href="/static/life/study.html"  class="on">동아리/스터디</a>
+                        <a href="/static/life/study.html" class="on">동아리/스터디</a>
                         <a href="/static/life/meal.html">식단안내</a>
                         <a href="/static/life/galary.html">갤러리</a>
                     </nav>
                 </aside>
                 <section>
-                    <span>학생회 소개</span>
-                    <article>컨텐츠 내용 꾸미기</article>
+                    <span>동아리/스터디</span>
+                    <article>
+                        <div>
+                            <img src="/static/common/images/study_sample1.jpg">
+                            <a href="#">축구동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="/static/common/images/study_sample2.jpg">
+                            <a href="#">밴드 동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="/static/common/images/study_sample3.jpg">
+                            <a href="#">고양이 동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="/static/common/images/study_sample4.jpg">
+                            <a href="#">연합동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="/static/common/images/study_sample5.jpg">
+                            <a href="#">봉사 동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="/static/common/images/study_sample6.jpg">
+                            <a href="#">수영 동아리</a>
+                            <ul>
+                                <li>조회수 23</li>&nbsp|&nbsp;
+                                <li>글로벌...</li>&nbsp|&nbsp;
+                                <li>25.02.20</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <div class="page">
+                        <a href="#" class="first"><img src="/static/common/images/btn-first-page.png"></a>
+                        <a href="#" class="prev"><img src="/static/common/images/btn-prev-page.png"></a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next"><img src="/static/common/images/btn-next-page.png"></a>
+                        <a href="#" class="last"><img src="/static/common/images/btn-last-page.png"></a>
+                    </div>
                 </section>
             </main>
             <footer>
