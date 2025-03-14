@@ -29,7 +29,7 @@ textarea {
 header {
     top: 0;
     width: 100%;
-    height: 110px;
+    height: auto;
     margin: 0 auto;
     background-color: #fff;
 }
