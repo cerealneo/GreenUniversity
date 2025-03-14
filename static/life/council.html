@@ -60,15 +60,43 @@
                 display: block;
                 max-width: 930px;
                 height: 56px;
-                border-bottom: 2px solid #222;
                 color: #333;
                 font-weight: 700;
                 font-size: 26px;
             }
 
-            section > article {
-                margin-top: 20px;
+            .read {
+                display: flex;
             }
+
+            .read > div {
+                width: 310px;
+                height: 150px;
+                padding: 20px 20px;
+                box-sizing: border-box;
+                text-align: center;
+                color: #fff;
+            }
+
+            .read > div:nth-child(1) {background-color: #69A0E0;}
+            .read > div:nth-child(2) {background-color: #6AA98C;}
+            .read > div:nth-child(3) {background-color: #888;}
+
+            .read > div > img {
+                margin: 10px;
+                float: left;
+            }
+
+            .read > div > div {
+                margin-left: 10px;
+                line-height: 2;
+            }
+
+            .read span {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        
         
         </style>
     </head>
@@ -170,7 +198,37 @@
                 </aside>
                 <section>
                     <span>학생회 소개</span>
-                    <article>컨텐츠 내용 꾸미기</article>
+                    <article>
+                        <div class="read">
+                            <div>
+                                <img src="/static/common/images/council_sample.png">
+                                <div>
+                                    <span>활동증명서</span><br>
+                                    그린대 학생회<br>
+                                    활동증명서를<br>
+                                    발급받으세요!<br>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/static/common/images/council_sample2.png">
+                                <div>
+                                    <span>회의록</span><br>
+                                    총학생회<br>
+                                    회의록을<br> 
+                                    살펴보세요!
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/static/common/images/council_sample2.png">
+                                <div>
+                                    <span>과거 자료</span><br>
+                                    홈페이지 개편 이전<br>
+                                    총학생회 자료를<br> 
+                                    확인해보세요!
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </section>
             </main>
             <footer>
@@ -187,11 +245,11 @@
     
                     <div class="footer-container">
                         <select class="footer-dropdown">
-                            <option>주요사이트</option>
-                            <option>그린대학교</option>
-                            <option>취업진로지원센터</option>
-                            <option>현장실습지원센터</option>
-                            <option>학생생활관</option>
+                            <option><a href="#" title="주요사이트 바로가기"></a>주요사이트</a></option>
+                            <option><a href="#" target="_blank">그린대학교</a></option>
+                            <option><a href="#" target="_blank">취업진로지원센터</a></option>
+                            <option><a href="#" target="_blank">현장실습지원센터</a></option>
+                            <option><a href="#" target="_blank">학생생활관</a></option>
                         </select>
                         <div class="footer-content-box">
                             <span class="footer_logo"><img src="/static/common/images/footer_logo.png" alt="그린대학교"></span>
