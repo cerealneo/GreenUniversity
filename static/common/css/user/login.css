@@ -1,0 +1,146 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    }
+    
+    ul,
+    ol {
+    list-style: none;
+    }
+    
+    a {
+    text-decoration: none;
+    color: #111;
+    }
+    
+    input,
+    textarea {
+    outline: none;
+    }
+    
+    #wrapper {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    }
+
+/* ================================================= */
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+  
+}
+
+article {
+    margin: 0 auto;
+    position: relative;
+    left: 7%;
+}
+
+/* ================================================= */
+
+
+.form-hd {
+    margin-top: 5px;
+}
+
+.form-hd > p {
+    color: #3f97f6;
+}
+
+.form-hd > p:nth-child(1) {
+    font-size: 20px;
+}
+
+.form-hd > p:nth-child(2) {
+    font-size: 15px;
+}
+
+
+/* ================================================= */
+
+.checkbox {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: #dfdfdf;
+    border-radius: 24px;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+div > li:nth-child(1) {
+    margin-right: 10px;
+}
+
+.checkbox:checked {
+    background-image: url(/static/common/images/bu_h5.png);
+    background-position: center;
+    background-color: white;
+    border: 1px solid #eee;
+}
+
+form {
+    width: 495px;
+    margin-top: 20px;
+}
+
+form > ul > div {
+    display: flex;
+    color: #333333;
+}
+
+form > ul {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+form > ul > a {
+    color: #333333;
+}
+
+form > input {
+    width: 483px;
+    height: 47px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+}
+
+
+
+.loginbtn {
+    width: 100%;
+    background-color: #3f97f6;
+    color: white;
+    border: none;
+}
+
+.guide {
+    margin-top: 20px;
+}
+
+.guide > p:nth-child(1) {
+    color: #145074;
+    font-size: 18px;
+}
+
+.guide > p:nth-child(1) > img {
+    margin-right: 5px;
+}
+
+.guide > p {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 5px;
+}
