@@ -4,11 +4,14 @@
         <meta charset="UTF-8">
         <title>공지사항</title>
         <link rel="stylesheet" href="/static/common/css/_header.css">
-        <link rel="stylesheet" href="/static/common/css/Bachelor/BacNotice.css">
+        <link rel="stylesheet" href="/static/common/css/user/terms.css">
         <link rel="stylesheet" href="/static/common/css/_footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+
+        </style>
     </head>
     <body>
         <div id="wrapper">
@@ -91,81 +94,41 @@
                 <article class="inline">
                     <a href="/static/main.html"><img src="/static/common/images/ico-home.png" alt="homeico"></a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
-                    <a href="/static/Bachelor/BacNotice.html">학사안내</a>
+                    <a href="/static/user/terms.html">회원</a>
                     <img src="/static/common/images/bg-path-arrow.png" alt="arrowright">
-                    <a href="/static/Bachelor/BacNotice.html">공지사항</a>
+                    <a href="/static/user/terms.html">약관안내</a>
                 </article>
             </div>
             <main>
-                <article class="side">
-                    <h4>학사안내</h4>
-                        <ul>
-                            <li><a href="/static/Bachelor/BacNotice.html">공지사항</a></li>
-                            <li><a href="/static/Bachelor/BacSchedule.html">학사일정</a></li>
-                            <li><a href="/static/Bachelor/BacSubscribe.html">수강신청</a></li>
-                            <li><a href="/static/Bachelor/BacResult.html">성적</a></li>
-                            <li><a href="/static/Bachelor/BacGrad.html">수료 및 졸업</a></li>
-                            <li><a href="/static/Bachelor/BacQuestion.html">자주묻는질문</a></li>
-                        </ul>
-                </article>
-                <article class="notice">
-                    <div class="noticetop">
-                        <h4>공지사항</h4>
+                <div class="textarea">
+                    <h4>약관안내</h4>
+                    <p>※ 대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다<br>
+                        ※ 만 14세 미만 아동의 경우 홈페이지 회원가입에 제한이 있습니다.</p>
+                </div>
+                <div class="termsarea">
+                    <table>
+                        <tr>
+                            <th>이용약관</th>
+                            <td><textarea name="terms" id="terms" readonly>약관내용 출력하기</textarea></td>
+                        </tr>
+                        <tr>
+                            <th>개인정보 수집안내</th>
+                            <td><textarea name="terms" id="terms" readonly>약관내용 출력하기</textarea></td>
+                        </tr>
+                    </table>
+                    <div class="ckarea">
+                        <input type="checkbox" class="ckbx"/>
+                        <p>위의 홈페이지 이용에 따른 회원가입 약관 및 개인정보 수집·이용에 모두 동의합니다.</p>
                     </div>
-                    <div class="search">
-                        <select class="dropdown">
-                            <option>전체</option>
-                            <option>제목</option>
-                            <option>작성자</option>
-                            <option>내용</option>
-                        </select>
-                        <input type="text" placeholder="검색어를 입력해 주세요">
-                        <div class="searchbtn"> 
-                            <a href="">검색</a>
-                        </div>
+                </div>
+                <div class="pagebtn">
+                    <div class="cancle">
+                        <a href="#">취소</a>
                     </div>
-                    <div class="noticemain">
-                        <table>
-                            <tr>
-                                <th>번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>작성일</th>
-                                <th>조회</th>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><img src="/static/common/images/ico-new01.gif" alt="iconew">2025학년도 신입학 3차 추가모집 모집요강 및 모집...</td>
-                                <td>담당자</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><img src="/static/common/images/ico-new01.gif" alt="iconew">2025학년도 신입학 2차 추가모집 모집요강 및 모집...</td>
-                                <td>담당자</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>2025학년도 신입학 추가모집 모집요강 및 모집인원 공지</td>
-                                <td>담당자</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
-                        </table>
-                        <article class="pagebtn">
-                            <a href=""><img src="/static/common/images/btn-first-page.png" alt="firstarr"></a>
-                            <a href=""><img src="/static/common/images/btn-prev-page.png" alt="firstarr"></a>
-                            <a href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href=""><img src="/static/common/images/btn-next-page.png" alt="firstarr"></a>
-                            <a href=""><img src="/static/common/images/btn-last-page.png" alt="firstarr"></a>
-                        </article>
+                    <div class="next">
+                        <button>다음</button>
                     </div>
-                </article>
+                </div>
             </main>
             <footer>
                 <div class="footer">
