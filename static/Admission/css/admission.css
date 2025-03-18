@@ -46,9 +46,11 @@ h2 {
     color:#fff;
 }
 
-
+.sidebar h2{
+    margin-bottom: 15px;
+}
 .content {
-    margin-left: 270px;
+    margin-left: 50px;
 }
 
 .contant-table tr td:nth-child(1){width: 79.88px;}
