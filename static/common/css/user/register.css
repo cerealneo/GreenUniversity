@@ -77,7 +77,7 @@ main .textarea {
     width: 990px;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 main .textarea h4 {
     color: #3F97F6;
@@ -98,6 +98,7 @@ main .termsarea {
 }
 main .termsarea table {
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 main .termsarea table tr th{
     border-right: 1px solid #dedede;
@@ -115,6 +116,18 @@ main .termsarea table tr td{
     align-items: center;
 }
 
+.address-row td {
+    height: 155px;
+    display: block;
+}
+
+.address-container {
+    display: block;
+}
+
+.address-row td {
+    min-height: 155px;
+}
 
 
 main .register{
@@ -139,8 +152,9 @@ main .register{
 .address-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 5px; /* 요소 간격 */
+    align-items: flex-start;
+    gap: 12px; /* 요소 간격 */
+    flex-direction: column;
 }
 
 .address-container .zipcode-btn {
@@ -152,6 +166,7 @@ main .register{
     background-color: white;
     border: 1px solid #ccc;
     cursor: pointer;
+    color: #757575;
 }
 
 .address-container .register.zip {
