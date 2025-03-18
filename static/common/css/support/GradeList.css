@@ -152,21 +152,12 @@
         color: #666666;
         font-size: 15px;
     }
-    main .search input {
-        padding: 10px;
-        width: 237px;
-        border: 1px solid #DEDEDE;
-        color: #666666;
-        font-size: 15px;
-    }
-    main .search .searchbtn {
-        padding: 10px 20px;
-        background-color: #3F97F6;
-        border: 1px solid #3F97F6;
-    }
-    main .search .searchbtn a {
-        color: white;
-        font-size: 15px;
+
+    .p-search{
+        float: right;
+        padding-top: 20px;
+        padding-right: 30px;
+        font-weight: bold;
     }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 table {
@@ -208,11 +199,10 @@ table {
    
 }
 
-.p-search{
-    float: left;
-    padding-top: 20px;
-    padding-right: 30px;
-    font-weight: bold;
+.p-nb{
+    color: #666666;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 350;
+    padding: 3px;
 }
-
-

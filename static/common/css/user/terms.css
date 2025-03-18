@@ -83,6 +83,7 @@ main .textarea h4 {
     color: #3F97F6;
     font-size: 20px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 main .textarea p {
     color: #3F97F6;
@@ -103,6 +104,7 @@ main .termsarea table tr th{
     border-bottom: 1px solid #dedede;
     width: 198px;
     height: 206px;
+    background: #F4F8FC;
 }
 main .termsarea table tr td{
     width: 788px;
@@ -114,6 +116,7 @@ main .termsarea table tr td{
     width: 100%;
     height: 100%;
     padding: 5px;
+    border: 1px solid #dddddd;
 }
 .ckarea {
     display: flex;
