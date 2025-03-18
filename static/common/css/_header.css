@@ -88,6 +88,8 @@ header .headerbar img {
     float: right;
     display: flex;
     gap: 20px;
+    position: relative;
+    left: 5px;
 }
 
 #quickmenu>li {
@@ -102,6 +104,9 @@ header .headerbar img {
     padding: 10px;
     display: block;
     transition: 0.3s;
+}
+#quickmenu>li:last-of-type>a {
+    padding-right: 0px;
 }
 
 /* 서브메뉴바 */
