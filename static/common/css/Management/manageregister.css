@@ -65,8 +65,9 @@
     }
     
     main aside a {
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 25px;
+        line-height: 30px;
     }
     main aside div {
         margin-bottom: 20px;
@@ -111,4 +112,96 @@
     }
     main .managemain div img {
         margin-right: 5px;
+    }
+
+    main .managemain .info {
+        width: 100%;
+    }
+    table {
+        width: 100%;
+        height: auto;
+        border-top: 2px solid #8798A3;
+        border-collapse: collapse;
+    }
+    table th {
+        background-color: #FAFAFA;
+        border: 1px solid #E5E5E5;
+        width: 217px;
+        height: 48px;
+        font-size: 13px;
+    }
+    table td {
+        border: 1px solid #E5E5E5;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 13px;
+    }
+    .redtxt {
+        color: #BC2E13;
+    }
+    table input {
+        color: #333333;
+        width: 150px;
+        height: 33px;
+        border: 1px solid #959595;
+    }
+    table select {
+        color: #333;
+        width: 150px;
+        height: 35px;
+        border: 1px solid #959595;
+    }
+    table select option{
+        color: #333;
+    }
+    .classname {
+        width: 426px;
+        height: 33px;
+        padding-left: 5px;
+    }
+    .explain {
+        width: 426px;
+        height: 126px;
+        padding-left: 5px;
+    }
+    .ckbox {
+        width: 13px;
+        height: 13px;
+        border: 1px solid #767676;
+        position: relative;
+        top: 2px;
+    }
+    label {
+        position: relative;
+        top: 10px;
+        font-size: 13px;
+    }
+    .how {
+        width: 450px;
+        height: 33px;
+    }
+    .book {
+        width: 450px;
+        height: 33px;
+    }
+    .room {
+        width: 220px;
+        height: 33px;
+    }
+    
+    .stdinfo input {
+        padding-left: 5px;
+        color: #757575;
+    }
+    .stdinfo button {
+        float: right;
+        width: 100px;
+        height: 33px;
+        background-color: #1A528E;
+        border: 1px solid #08305A;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
     }
