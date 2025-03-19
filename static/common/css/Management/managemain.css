@@ -65,8 +65,9 @@
     }
     
     main aside a {
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 25px;
+        line-height: 30px;
     }
     main aside div {
         margin-bottom: 20px;

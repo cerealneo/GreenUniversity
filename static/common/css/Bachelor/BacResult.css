@@ -80,6 +80,8 @@
         main .side {
             width: 210px;
             flex-shrink: 0;
+            position: relative;
+            bottom: 10px;
         }
         main .side h4 {
             font-size: 32px;
@@ -89,6 +91,7 @@
             text-align: left;
             border-top: 2px solid black;
             width: 210px;
+            margin-top: 10px;
         }
         main .side ul li {
             border-bottom: 1px solid #DCDCDC;
