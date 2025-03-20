@@ -55,9 +55,9 @@ h2 {
 .sidebar h2{
     margin-bottom: 15px;
 }
-.content {
-    margin-left: 50px;
-}
+
+
+
 
 .contant-table tr td:nth-child(1){width: 79.88px;}
 .contant-table tr td:nth-child(2){width: 490px;}
@@ -152,6 +152,7 @@ article {
         max-width: 940px;
         padding-left: 50px;
         flex-grow: 1;
+        margin-left: auto;
     }
     main .notice .noticetop {
         width: 100%;
@@ -171,6 +172,7 @@ article {
         width: 100%;
         height: auto;
         float: right;
+    
     }
     main .notice .noticemain table {
         width: 100%;
@@ -220,7 +222,7 @@ article {
             /*정시/수시모집 */
     .content {
         width: 900px;
-        margin-left: 50px auto;
+        margin-left: auto;
         background: white;
         padding: 30px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
