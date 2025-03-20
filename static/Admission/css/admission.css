@@ -1,3 +1,5 @@
+
+
 main {
     width: 100%;
     max-width: 1200px;
@@ -24,6 +26,10 @@ h2 {
     width: 210px;
     height: auto;
     float: left;
+  
+}
+.sidebar h2 {
+    margin-bottom: 20px;
 }
 .menu > li > a {
     display: block;
@@ -69,24 +75,18 @@ article {
     margin-top: 20px;
 }
 
-    /*메인*/
-    main {
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        height: auto;
-        margin: 0 auto;
-    }
+  
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
     /*사이드*/
-    main .side {
+    main .sidebar {
         width: 210px;
         flex-shrink: 0;
+        margin-bottom: 15px;
     }
     main .side h2 {
         font-size: 32px;
         font-weight: bold;
-        padding-bottom: 10PX;
+        padding-bottom: 15PX;
     }
     main .side ul {
         text-align: left;
@@ -106,26 +106,7 @@ article {
     main .side ul li:hover a {
         color: white;
     }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-    /*공지사항*/
-    main .notice {
-        width: 100%;
-        max-width: 940px;
-        padding-left: 50px;
-        flex-grow: 1;
-    }
-    main .notice .noticetop {
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid black;
-        margin-bottom: 25px;
-    }
-    main .notice .noticetop h4 {
-        font-size: 26px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
     /*search*/
     main .search {
         float: right;
@@ -161,6 +142,27 @@ article {
         color: white;
         font-size: 15px;
     }
+
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+    /*공지사항*/
+    main .notice {
+        width: 100%;
+        max-width: 940px;
+        padding-left: 50px;
+        flex-grow: 1;
+    }
+    main .notice .noticetop {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid black;
+        margin-bottom: 25px;
+    }
+    main .notice .noticetop h4 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
     /*noticemain*/
     main .notice .noticemain {
@@ -212,8 +214,78 @@ article {
         background-color: #3F97F6;
     }
     
+ 
+            /*정시/수시모집 */
+    .content {
+        width: 900px;
+        margin-left: 50px auto;
+        background: white;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    
+    .content h1 {
+        color: #2c3e50;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .content-box h2 {
+        color: #2980b9;
+        font-size: 22px;
+        margin-top: 20px;
+        border-bottom: 2px solid #2980b9;
+        padding-bottom: 5px;
+    }
+    
+    .content-box p, ul {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+    
+    .content-box ul {
+        list-style-type: square;
+        padding-left: 20px;
+        text-align: left;
+    }
+    
+    .content-box ul li {
+        margin-bottom: 5px;
+    }
+    
+    .content-box table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    
+    .content-box table, th, td {
+        border: 1px solid #ccc;
+    }
+    
+    .content-box th, td {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .content-box th {
+        background-color: #3498db;
+        color: white;
+    }
+    
+    .content-box tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    .content-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
     
 
 
   
-
