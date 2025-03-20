@@ -1,5 +1,39 @@
 
-
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans Korean", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    }
+    ul,
+    ol {
+    list-style: none;
+    }
+    
+    a {
+    text-decoration: none;
+    color: #111;
+    }
+    
+    input,
+    textarea {
+    outline: none;
+    }
+    
+    #wrapper {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
     /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
     /*메인*/
     main {
@@ -43,8 +77,7 @@
         width: 1130px;
         height: auto;
         flex-grow: 1;
-        padding: 20px;
-        padding-right: 0;
+        padding: 20px 0 20px 20px;
     }
     main .managemain .managemaintop {
         width: 100%;
@@ -66,10 +99,47 @@
     }
     main .managemain .managemaintop h3 p {
         font-size: 14px;
-        color: #145074;
-        margin-left: 10px;
+        color: #333333;
     }
 
+
+    /* -------------------------------------------------------- */
+     /*search*/
+     main .search {
+        float: right;
+        display: flex;
+        margin-bottom: 14.52px;
+        
+    }
+    main .search .dropdown {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 150px;
+        padding: 10px;
+        margin-right: 5px;
+        border: 1px solid #DEDEDE;
+        color: #666666;
+        font-size: 15px;
+    }
+    main .search input {
+        padding: 10px;
+        width: 237px;
+        border: 1px solid #DEDEDE;
+        color: #666666;
+        font-size: 15px;
+    }
+    main .search .searchbtn {
+        padding: 10px 20px;
+        background-color: #1a528e;
+        border: 1px solid #1a528e;
+    }
+    main .search .searchbtn a {
+        color: white;
+        font-size: 15px;
+    }
+
+    /* -------------------------------------------------------- */
     main .managemain div h4 {
         font-size: 18px;
         color: #145074;
@@ -82,22 +152,40 @@
         width: 100%;
         height: auto;
         text-align: center;
-        border-top: 2px solid black;
+        border-top: 1px solid #A3A3A3;
         border-collapse: collapse;
         margin-bottom: 25px;
     }
     main .managemain div table th {
         padding: 13px;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 13px;
+        color: #333333;
         border-bottom: 1px solid #A3A3A3;
         background-color: #FAFAFA;
     }
     main .managemain div table td {
         padding: 13px;
-        font-size: 16px;
+        font-size: 13px;
+        font-weight: 350;
+        color: #333333;
         border-bottom: 1px solid #cccccc;
     }
+    main .managemain div table tr .ing {
+        color: #008000;
+    }
+    main .managemain div table tr .out {
+        color: #FF0000;
+    }
+    main .managemain div table tr .fire {
+        color: #FF0000;
+    }
+    main .managemain div table tr .rest {
+        color: #FFA500;
+    }
+    main .managemain div table tr .grad {
+        color: #0000FF;
+    }
+    
     main .managemain .secondfloor {
         width: 100%;
         display: flex;
@@ -132,13 +220,38 @@
         color: #CD3631;
 
     }
-    .viewarea {
-        display: flex;
-        justify-content: space-between;
+
+    .pagebtn {
+        text-align: center;
+        justify-content: center;
     }
-    .viewarea img{
-        width: 17px;
-        height: 17px;
+    .pagebtn a {
+        padding: 4px 10px 5px 10px;
+        font-size: 15px;
+        border: 1px solid #DEDEDE;
+        box-sizing: border-box;
+        color: #888;
+    }
+
+    .pagebtn-1 {
+        margin-right: 8px;
+    }
+
+    .pagebtn-2 {
+        margin-left: 8px;
+    }
+
+    .pagebtn a:hover {
+        color: #fff;
+        background-color: #1a528e;
+    }
+    .pagebtn button {
+        padding: 6px 33px;
+        background-color: #1A528E;
+        border: 1px solid #08305A;
+        box-sizing: border-box;
+        color: white;
+        font-size: 13px;
         position: relative;
-        top: 10px;
+        left: 378px;
     }
