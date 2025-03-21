@@ -8,12 +8,11 @@
         margin: 0 auto;
     }
     main aside {
-        width: 270px;
+        flex-basis: 270px;
+        flex-grow: 0;
         height: auto;
-        flex-shrink : 0;
         padding: 25px 30px;
         background-color: #dadada;
-        box-sizing: border-box;
     }
     main aside img {
         width: 20px;
@@ -216,6 +215,8 @@
         box-sizing: border-box;
         color: white;
         font-size: 13px;
+        margin-left: auto;
+        display: block;
         position: relative;
-        left: 378px;
+        bottom: 27px;
     }
