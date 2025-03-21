@@ -26,6 +26,7 @@
     #wrapper {
     width: 100%;
     height: auto;
+    
     }
     button {
         all: unset;
@@ -35,7 +36,7 @@
     
     /*헤더*/
     header {
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     }
@@ -73,7 +74,7 @@
     
     
     .headerbar {
-    width: 100%px;
+    width: 100%;
     height: 60px;
     margin: 0 auto;
     display: flex;
@@ -93,18 +94,4 @@
     }
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-    /*푸터*/
-    footer {
-        width: 100%;
-        height: auto;
-        background-color: #19202D;
-    }
-    footer .footertxt {
-        width: 1400px;
-        height: auto;
-        margin: 0 auto;
-        padding: 15px;
-    }
-    footer .footertxt p {
-        color: white;
-    }
+    
