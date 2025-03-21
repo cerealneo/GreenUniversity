@@ -1,15 +1,14 @@
 
 
 main {
+    display: flex;
     width: 100%;
     max-width: 1200px;
     min-height:540px;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
-
-
-
 
 h2 {
     font-size: 32px;
@@ -55,9 +54,6 @@ h2 {
 .sidebar h2{
     margin-bottom: 15px;
 }
-
-
-
 
 .contant-table tr td:nth-child(1){width: 79.88px;}
 .contant-table tr td:nth-child(2){width: 490px;}
@@ -149,7 +145,7 @@ article {
     /*공지사항*/
     main .notice {
         width: 100%;
-        max-width: 940px;
+        max-width: 930px;
         padding-left: 50px;
         flex-grow: 1;
         margin-left: auto;
@@ -163,7 +159,7 @@ article {
     main .notice .noticetop h4 {
         font-size: 26px;
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
     }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
