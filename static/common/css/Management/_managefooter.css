@@ -2,7 +2,7 @@
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
     /*푸터*/
     footer {
-        width: 100%;
+        width: 100vw;
         height: auto;
         background-color: #19202D;
     }
