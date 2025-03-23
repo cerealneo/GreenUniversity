@@ -2,12 +2,13 @@
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
     /*푸터*/
     footer {
-        width: 100vw;
+        width: 100%;
         height: auto;
         background-color: #19202D;
     }
     footer .footertxt {
-        width: 1400px;
+        width: 100%;
+        max-width: 1400px;
         height: auto;
         margin: 0 auto;
         padding: 15px;
@@ -15,3 +16,4 @@
     footer .footertxt p {
         color: white;
     }
+    

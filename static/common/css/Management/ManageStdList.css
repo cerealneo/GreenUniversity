@@ -8,12 +8,11 @@
         margin: 0 auto;
     }
     main aside {
-        width: 270px;
+        flex-basis: 270px;
+        flex-grow: 0;
         height: auto;
-        flex-shrink : 0;
         padding: 25px 30px;
         background-color: #dadada;
-        box-sizing: border-box;
     }
     main aside img {
         width: 20px;
@@ -38,7 +37,8 @@
     }
 
     main .managemain {
-        width: 1130px;
+        width: 100%;
+        max-width: 1130px;
         height: auto;
         flex-grow: 1;
         padding: 20px 0 20px 20px;
@@ -150,40 +150,7 @@
         color: #0000FF;
     }
     
-    main .managemain .secondfloor {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    main .managemain .secondfloor .secondtb {
-        width: 50%;
-        padding: 10px;
-    }
-    main .managemain .secondfloor .thirdtb {
-        width: 50%;
-        padding: 10px;
-    } 
-    main .managemain .lastfloor {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    main .managemain .lastfloor .fifthtb {
-        width: 50%;
-        padding: 10px;
-    }
-    main .managemain .lastfloor .sixthtb {
-        width: 50%;
-        padding: 10px;
-    }
-    main .managemain .lastfloor .sixthtb tr button {
-        color: #207918;
-        font-size: 14px;
-    }
-    main .managemain .lastfloor .sixthtb tr .redback{
-        color: #CD3631;
-
-    }
+    
 
     .pagebtn {
         text-align: center;
@@ -216,6 +183,8 @@
         box-sizing: border-box;
         color: white;
         font-size: 13px;
+        margin-left: auto;
+        display: block;
         position: relative;
-        left: 378px;
+        bottom: 27px;
     }
