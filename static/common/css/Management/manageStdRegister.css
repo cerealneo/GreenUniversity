@@ -198,7 +198,7 @@ td {
 }
 
 /* ------------------------------------------------------------------------------------------- */
-.dropdown {
+select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -213,6 +213,7 @@ td {
     font-size: 13px;
 }
 
+
 /* ------------------------------------------------------------------------------------------- */
 
 .form-btn {
@@ -226,5 +227,15 @@ td {
     float: right;
 }
 
+
+button {
+    font-size: 13px;
+    text-align: center;
+    margin-left: 3px;
+    width: 60px;
+    height: 34px;
+    background-color: #1A528E;
+    color: #fff;
+}
 
 
