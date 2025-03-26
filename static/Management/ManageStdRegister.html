@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <script src="/static/common/js/manageStdRegister.js"></script>
+    <script defer src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="/static/common/js/manageStdRegister.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -103,10 +105,8 @@
                         </td>
                         <td class="td-hd">국적</td>
                         <td class="td-bd">
-                            <select class="dropdown">
-                                <option>선택</option>
-                                <option>선택1</option>
-                                <option>선택2</option>
+                            <select  id="nationality">
+                                <option value="">선택</option>
                             </select>
                         </td>
                      </tr>
@@ -122,9 +122,10 @@
                         <td class="td-hd"></td>
                         <td class="td-hd">주소</td>
                         <td colspan="4" class="td-bd">
-                            <input type="text" placeholder="우편번호 선택"> <br>
-                            <input type="text" placeholder="기본주소 선택" class="addr"> <br>
-                            <input type="text" placeholder="상세주소 입력" class="addr"> <br>
+                            <input type="text" id="postcode" placeholder="우편번호 선택">
+                            <button type="button" onclick="searchPostcode()">우편번호</button><br>
+                            <input type="text" id="address" class="addr" placeholder="기본주소 선택"><br>
+                            <input type="text" id="detailAddress" class="addr" placeholder="상세주소 입력">
                         </td>
                     </tr>
                 </table>
