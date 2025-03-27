@@ -11,7 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CollegeDTO {
 
-    private String uid;
+    private int no;
+    private String college_name;
+    private String college_eng_name;
+    private String info_title;
+    private String info_context;
+    private String file;
 
 
 }

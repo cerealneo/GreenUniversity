@@ -137,6 +137,9 @@ form > ul {
     justify-content: space-between;
     align-items: center;
 }
+form ul li:nth-of-type(3) {
+    margin-left: 10px;
+}
 
 form > ul > a {
     color: #333333;

@@ -11,7 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CalenderDTO {
 
-    private String uid;
+    private int no;
+    private String calendar_date;
+    private String calendar_content;
 
 
 }
