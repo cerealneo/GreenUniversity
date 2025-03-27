@@ -11,7 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class DepartmentDTO {
 
-    private String uid;
-
+    private int no;
+    private String college_name;
+    private String department_name;
+    private String department_eng_name;
+    private String establishment_date;
+    private String pro_name;
+    private String dep_number;
 
 }
